@@ -42,6 +42,10 @@ img, picture, svg, video, canvas {
 /* Inputs y botones heredan fuente */
 input, button, textarea, select {
     font: inherit;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 /* Evita desbordamiento de texto en párrafos y encabezados */

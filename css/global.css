@@ -1,8 +1,4 @@
 /* HEADER */
-* {
-    border: 1px solid red;
-}
-
 .header {
     position: fixed;
     z-index: 100;
@@ -10,4 +6,23 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: .5rem 1rem;
+}
+
+.nav_scroll-pi {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scroll-pi {
+    padding: 4px 6px;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.pages {
+    position: absolute;
+    display: none;
 }
