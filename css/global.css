@@ -1,0 +1,13 @@
+/* HEADER */
+* {
+    border: 1px solid red;
+}
+
+.header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
