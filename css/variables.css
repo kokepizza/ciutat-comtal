@@ -2,8 +2,8 @@
 /* Variables CSS (colores, espaciados, etc.) para facilitar mantenimiento. */
 
 :root {
-    --black: #1D1D1B;
-    --light: #F5F5F5;
+    --text: #1D1D1B;
+    --bg: #F5F5F5;
     --gray: #959589;
     --light-gray-blue: #EAF1F7;
     --light-orange: #FFF1DD;
