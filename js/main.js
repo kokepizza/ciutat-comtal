@@ -1,4 +1,14 @@
 /* ARCHIVO PRINCIPAL DE JAVASCRIPT */
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("JavaScript cargado correctamente.");
-});
+console.log("JavaScript cargado correctamente.");
+
+import './animations/global.js';
+
+if (window.matchMedia("(max-width: 900px)").matches) {
+  import('./animations/mobile.js').then((module) => {
+    module.initMobileAnimations();
+  });
+} else {
+  import('./animations/desktop.js').then((module) => {
+    module.initDesktopAnimations();
+  });
+}

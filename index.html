@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- SEO -->
-        <title>Ciutat condal</title>
+        <title>Ciutat Comtal</title>
         <meta name="description" content="Ciutat Comtal és una experiència interactiva que explora l’evolució de Barcelona entre el 1995 i el 2025, a través de dades sobre el cost de la vida, el turisme i la transformació urbana. Una mirada crítica i poètica sobre com ha canviat la ciutat i què ens diu això de nosaltres.">
         <meta name="author" content="kokepizza">
         <meta name="keywords" content="Barcelona, evolució urbana, Ciutat Comtal, cost de la vida Barcelona, turisme Barcelona, transformació ciutat, dades interactives, projecte digital, experiència interactiva, història Barcelona, canvi social, cronologia urbana, visualització de dades, Barcelona 1995-2025, urbanisme Barcelona">
@@ -17,10 +17,13 @@
         <!-- CSS  -->
         <link rel="stylesheet" href="css/style.css">
 
+        <!-- GSAP  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
+        
         <!-- JS  -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js" defer></script>
-        <script src="js/main.js" defer></script>
+        <script type="module" src="js/main.js" defer></script>
     </head>
     <body>
 
@@ -44,19 +47,19 @@
                     </svg>
                 </h1>
                 <ul class="pages">
-                    <li>Notes de l'autor</li>
-                    <li>Cronologia</li>
-                    <li>Encara som a temps?</li>
-                </ul>
+                    <li><a href="#notes">Notes de l'autor</a></li>
+                    <li><a href="#cronologia">Cronologia</a></li>
+                    <li><a href="#temps">Encara som a temps?</a></li>
+                  </ul>
                 <div class="scroll-pi">
                     <span>00,00%</span>
                 </div>
             </nav>
             <button class="toggle-menu">
                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path class="line line-1" d="M2.5 5.00085H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path class="line line-2" d="M2.5 10.0009H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path class="line line-3" d="M2.5 15.0009H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="line-1" d="M2.5 5.00085H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="line-2" d="M2.5 10.0009H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="line-3" d="M2.5 15.0009H17.5" stroke="var(--text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
         </header>

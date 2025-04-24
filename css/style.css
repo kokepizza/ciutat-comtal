@@ -3,3 +3,4 @@
 @import url(typography.css); /* Tipografías y estilos de texto */
 @import url(variables.css); /* Variables CSS */
 @import url(global.css); /* Estilos globales */
+@import url(header.css);
