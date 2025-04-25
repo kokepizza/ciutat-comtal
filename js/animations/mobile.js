@@ -14,7 +14,6 @@ export function initMobileAnimations() {
     gsap.set(pagesMenu, { 
       opacity: 0,
       backdropFilter: "blur(0px)",
-      webkitBackdropFilter: "blur(0px)"
     });
     
     gsap.set(menuItems, { x: 100, opacity: 0 });
@@ -26,7 +25,6 @@ export function initMobileAnimations() {
     menuTL.to(pagesMenu, { 
       opacity: 1, 
       backdropFilter: "blur(10px)",
-      webkitBackdropFilter: "blur(10px)",
       duration: 0.5,
       ease: "power2.out"
     });
@@ -67,7 +65,7 @@ export function initMobileAnimations() {
     
 
     toggleMenu.addEventListener("click", () => {
-      
+
       if (pagesMenu.classList.contains("active")) {
         menuTL.reverse();
         buttonTL.reverse();
