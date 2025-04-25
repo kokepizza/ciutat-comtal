@@ -100,14 +100,15 @@ footer {
     background-color: var(--light-pinky-red);
 }
 
-#notes {
-    padding: 37.4px 0 39.4px;
+main {
+    padding: 2.5rem 0;
 }
 
-.article {
+.content {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
+    position: relative;
 }
 
 .title {
@@ -123,32 +124,69 @@ footer {
     padding-bottom: 4rem;
 }
 
+
 @media (min-width: 900px) {
-    .article {
-      flex-direction: row;
-      height: 100vh;
+
+    .content {
+        flex-direction: row;
+        padding: 0 1.5rem;
+        min-height: 100vh; /* Cambiado de height a min-height */
+        position: relative; /* Añadido para posicionamiento */
+        overflow: visible; /* Cambiado de hidden a visible */
     }
 
-    .article-title {
-      position: sticky;
-      top: 0;
-      align-self: flex-start;
-      width: 35vw;
-      min-width: 300px;
-      max-width: 500px;
-      height: 100vh;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      padding: 2rem 2rem 2rem 0;
-      z-index: 2;
-      background: inherit;
+    .content::before,
+    .content::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--gray);
     }
 
-    .article-content {
-      width: 65vw;
-      height: 100vh;
-      overflow-y: auto;
-      padding: 2rem;
+    .content::before {
+        left: 1.5rem;
     }
-} 
+
+    .content::after {
+        right: 1.5rem;
+    }
+
+    /* Línea central */
+    .content .center-line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background: var(--gray);
+        transform: translateX(-50%);
+    }
+
+    .title {
+        flex: 1;
+        position: sticky;
+        top: 2.5rem; /* Alineado con el padding-top de main */
+        font-size: 7.5vw;
+        height: fit-content;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .text {
+        flex: 1;
+        padding-top: 64vh; /* Espacio para que el texto empiece más abajo */
+        min-height: 150vh; /* Asegura que haya suficiente contenido para scroll */
+        overflow-y: visible; /* Cambiado de auto a visible */
+        padding-bottom: 4rem; /* Espacio al final del texto */
+    }
+
+    .title,
+    .text,
+    .years {
+        margin: 0 1.5rem;
+    }
+}

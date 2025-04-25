@@ -21,7 +21,7 @@ updateSPI();
 window.addEventListener("scroll", updateSPI);
 
 // canvi de color del header i footer
-const sections = document.querySelectorAll('.article');
+const sections = document.querySelectorAll('.content');
 const header = document.querySelector('.header');
 const footer = document.querySelector('.footer');
 
