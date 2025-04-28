@@ -101,7 +101,12 @@ footer {
 }
 
 main {
-    padding: 2.5rem 0;
+    position: fixed;
+    top: 2.5rem;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
 }
 
 .content {
@@ -124,6 +129,9 @@ main {
     padding-bottom: 4rem;
 }
 
+#notes-menu {
+    display: none;
+}
 
 @media (min-width: 900px) {
 
@@ -153,8 +161,7 @@ main {
         right: 1.5rem;
     }
 
-    /* Línea central */
-    .content .center-line {
+    .center-line {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -167,7 +174,6 @@ main {
     .title {
         flex: 1;
         position: sticky;
-        top: 2.5rem; /* Alineado con el padding-top de main */
         font-size: 7.5vw;
         height: fit-content;
     }
@@ -180,7 +186,7 @@ main {
         flex: 1;
         padding-top: 64vh; /* Espacio para que el texto empiece más abajo */
         min-height: 150vh; /* Asegura que haya suficiente contenido para scroll */
-        overflow-y: visible; /* Cambiado de auto a visible */
+        overflow-y: auto; /* Cambiado de auto a visible */
         padding-bottom: 4rem; /* Espacio al final del texto */
     }
 
@@ -188,5 +194,36 @@ main {
     .text,
     .years {
         margin: 0 1.5rem;
+    }
+
+    #notes-menu {
+        position: fixed;
+        left: 3rem;
+        bottom: 3.5rem;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        font-family: 'Cardinal Fruit', serif;
+        font-weight: 500;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #notes-menu a {
+        display: block;
+        padding-right: 8rem;
+        color: var(--gray);
+        transition: color 0.3s ease;
+
+        &:hover,
+        &.active {
+            color: var(--text);
+        }
+    }
+
+    #notes-menu a:not(:last-child) {
+        border-bottom: 1px dashed var(--gray);
     }
 }
