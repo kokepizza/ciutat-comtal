@@ -26,6 +26,31 @@ const initSPI = () => {
 }
 
 // Header & Footer Background Color Animation
-const initHFColor = () => {}
+const initHFColor = () => {
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  const MAIN = document.querySelector("main");
+
+  document.querySelectorAll(".content[data-color]").forEach(colorElement => {
+      const color = colorElement.dataset.color;
+
+      ScrollTrigger.create({
+        trigger: colorElement,
+        start: "top top",
+        end: "bottom 80%",
+        scroller: MAIN,
+        markers: true,
+        onEnter: () => {
+            header.style.backgroundColor = color;
+            footer.style.backgroundColor = color;
+        },
+        onEnterBack: () => {
+            header.style.backgroundColor = color;
+            footer.style.backgroundColor = color;
+        },
+      });
+  });
+}
 
 initSPI();
+initHFColor();
