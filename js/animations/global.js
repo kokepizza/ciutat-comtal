@@ -25,32 +25,42 @@ const initSPI = () => {
   }
 }
 
-// Header & Footer Background Color Animation
+// Header & Footer Background-Color Animation
 const initHFColor = () => {
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
   const MAIN = document.querySelector("main");
+  const root = document.documentElement;
+  
+  // establir el color i el tema
+  const setTheme = (color, theme) => {
+    header.style.backgroundColor = color;
+    footer.style.backgroundColor = color;
+    
+    if (theme === "dark") {
+      root.style.setProperty('--text', '#F5F5F5');
+      root.style.setProperty('--bg', '#1D1D1B');
+    } else {
+      root.style.setProperty('--text', '#1d1d1b');
+      root.style.setProperty('--bg', '#F5F5F5');
+    }
+  };
 
   document.querySelectorAll(".content[data-color]").forEach(colorElement => {
-      const color = colorElement.dataset.color;
+    const color = colorElement.dataset.color;
+    const theme = colorElement.dataset.theme;
 
-      ScrollTrigger.create({
-        trigger: colorElement,
-        start: "top top",
-        end: "bottom 80%",
-        scroller: MAIN,
-        markers: true,
-        onEnter: () => {
-            header.style.backgroundColor = color;
-            footer.style.backgroundColor = color;
-        },
-        onEnterBack: () => {
-            header.style.backgroundColor = color;
-            footer.style.backgroundColor = color;
-        },
-      });
+    ScrollTrigger.create({
+      trigger: colorElement,
+      start: "top top",
+      end: "bottom 80%",
+      scrub: 1,
+      scroller: MAIN,
+      onEnter: () => setTheme(color, theme),
+      onEnterBack: () => setTheme(color, theme)
+    });
   });
-}
+};
 
 initSPI();
 initHFColor();

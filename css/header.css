@@ -12,6 +12,7 @@
     font-weight: 400;
     font-size: 12px;
     border-bottom: 1px solid var(--gray);
+    background-color: var(--light-gray-blue);
 }
 
 .nav {
