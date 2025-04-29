@@ -139,7 +139,6 @@ main {
         flex-direction: row;
         padding: 0 1.5rem;
         min-height: 100vh;
-        position: relative;
         overflow: visible;
     }
 
@@ -172,7 +171,6 @@ main {
     }
 
     .title {
-        flex: 1;
         position: sticky;
         top: 0;
         font-size: 7.5vw;
@@ -184,16 +182,15 @@ main {
     }
 
     .text {
-        flex: 1;
         padding-top: 64vh;
         min-height: 150vh;
         overflow-y: auto;
-        padding-bottom: 4rem;
     }
 
     .title,
     .text,
     .years {
+        flex: 1;
         margin: 0 1.5rem;
     }
 

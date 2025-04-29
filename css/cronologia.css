@@ -1,0 +1,92 @@
+.years {
+    padding-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--text);
+    border-radius: 50%;
+}
+
+.year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+
+    h3 {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 100;
+        font-size: .75rem;
+    }
+}
+
+/* posició */
+[data-year="1"],
+[data-year="10"] {
+    grid-column: 6;
+}
+
+[data-year="2"],
+[data-year="15"] {
+    grid-column: 11;
+}
+
+[data-year="3"],
+[data-year="12"] {
+    grid-column: 2;
+}
+
+[data-year="4"] {
+    grid-column: 9;
+}
+
+[data-year="5"],
+[data-year="14"]  {
+    grid-column: 5;
+}
+
+[data-year="6"] {
+    grid-column: 1;
+}
+
+[data-year="7"] {
+    grid-column: 7;
+}
+
+[data-year="8"] {
+    grid-column: 12;
+}
+
+[data-year="9"],
+[data-year="16"]  {
+    grid-column: 3;
+}
+
+[data-year="11"] {
+    grid-column: 10;
+}
+
+[data-year="13"],
+[data-year="17"] {
+    grid-column: 8;
+}
+
+/* padding */
+[data-year] {
+    padding-top: 2rem;
+}
+
+[data-year="2"],
+[data-year="4"],
+[data-year="9"],
+[data-year="12"],
+[data-year="14"] {
+    padding-top: 4rem;
+}
