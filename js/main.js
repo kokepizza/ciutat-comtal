@@ -1,5 +1,5 @@
 /* ARCHIVO PRINCIPAL DE JAVASCRIPT */
-console.log("JavaScript cargado correctamente.");
+console.log("JavaScript carregat correctament.");
 
 import './animations/global.js';
 

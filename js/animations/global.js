@@ -1,42 +1,31 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
-const SPI = document.querySelector(".scroll-pi");
-const SPI_BAR = document.querySelector(".scroll-pi-bar");
-const MAIN = document.querySelector("main");
+// Scroll Progress Indicator
+const initSPI = () => {
+  const SPI = document.querySelector(".scroll-pi");
+  const SPI_BAR = document.querySelector(".scroll-pi-bar");
+  const MAIN = document.querySelector("main");
 
-let ticking = false;
-
-const updateSPI = () => {
-  if (!MAIN) return;
-  const scrollTop = MAIN.scrollTop;
-  const docHeight = MAIN.scrollHeight - MAIN.clientHeight;
-  let scrollPercent = (scrollTop / docHeight) * 100;
-
-  // per que pugui arribar al 100%
-  if (scrollTop + 1 >= docHeight) {
-    scrollPercent = 100;
-  }
-  scrollPercent = Math.max(0, Math.min(scrollPercent, 100));
-
-  const scrollValue = scrollPercent.toFixed(2).padStart(5, '0').replace('.', ',');
-  if (SPI) {
-    SPI.textContent = `${scrollValue}%`;
-  }
-  if (SPI_BAR) {
-    SPI_BAR.style.transform = `translateX(${scrollPercent - 100}%)`;
+  function updateSPI() {
+    if (!MAIN) return;
+    const scrollTop = MAIN.scrollTop;
+    const docHeight = MAIN.scrollHeight - MAIN.clientHeight;
+    // percentatge d'scroll (scroll actual / altura total possible) * 100
+    let percent = docHeight === 0 ? 100 : Math.min(100, (scrollTop / docHeight) * 100);
+    // converteix el número a un string amb 2 decimals i el separa per comes
+    const scrollValue = percent.toFixed(2).padStart(5, '0').replace('.', ',');
+    // actualitza el valor i el desplaçament de la barra d'SPI
+    if (SPI) SPI.textContent = `${scrollValue}%`;
+    if (SPI_BAR) SPI_BAR.style.transform = `translateX(${percent - 100}%)`;
   }
 
-  ticking = false;
-};
-
-const onMainScroll = () => {
-  if (!ticking) {
-    window.requestAnimationFrame(updateSPI);
-    ticking = true;
+  if (MAIN) {
+    MAIN.addEventListener("scroll", () => requestAnimationFrame(updateSPI));
+    updateSPI();
   }
-};
-
-updateSPI();
-if (MAIN) {
-  MAIN.addEventListener("scroll", onMainScroll);
 }
+
+// Header & Footer Background Color Animation
+const initHFColor = () => {}
+
+initSPI();
