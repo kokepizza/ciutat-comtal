@@ -1,27 +1,33 @@
-export function initDesktopAnimations() {}
-
-const initHFColor = () => {
-    const header = document.querySelector("header");
-    const footer = document.querySelector("footer");
-    const MAIN = document.querySelector("main");
-    
-    document.querySelectorAll(".content[data-color]").forEach(colorElement => {
-      const color = colorElement.dataset.color;
+export function initDesktopAnimations() {
+  console.log("Init animacions d'escriptori");
   
-      ScrollTrigger.create({
-        trigger: colorElement,
-        start: "top 60%",
-        end: "bottom 60%",
-        scroller: MAIN,
-        markers: true,
-        onEnter: () => {
-          header.style.backgroundColor = color;
-          footer.style.backgroundColor = color;
-        },
-        onEnterBack: () => {
-          header.style.backgroundColor = color;
-          footer.style.backgroundColor = color;
-        },
-      });
-    });
-  }
+  initYearsAnimation();
+}
+
+function initYearsAnimation() {
+  const CRONO = document.getElementById("cronologia");
+  if (!CRONO) return;
+
+  const MAIN = document.querySelector("main");
+  const years = gsap.utils.toArray(".year");
+
+  // anys ocults i alçats inicialment
+  gsap.set(years, { autoAlpha: 0, y: 100 });
+
+  // animació anys
+  gsap.to(years, {
+    autoAlpha: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.5,
+    ease: "power2.out",
+
+    scrollTrigger: {
+      trigger: CRONO,
+      scroller: MAIN,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+    }
+  });
+}

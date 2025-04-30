@@ -1,7 +1,12 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
+export function initGlobalAnimations() {
+  initSPI();
+  initHFColor();
+}
+
 // Scroll Progress Indicator
-const initSPI = () => {
+function initSPI() {
   const SPI = document.querySelector(".scroll-pi");
   const SPI_BAR = document.querySelector(".scroll-pi-bar");
   const MAIN = document.querySelector("main");
@@ -10,10 +15,13 @@ const initSPI = () => {
     if (!MAIN) return;
     const scrollTop = MAIN.scrollTop;
     const docHeight = MAIN.scrollHeight - MAIN.clientHeight;
+
     // percentatge d'scroll (scroll actual / altura total possible) * 100
     let percent = docHeight === 0 ? 100 : Math.min(100, (scrollTop / docHeight) * 100);
+
     // converteix el número a un string amb 2 decimals i el separa per comes
     const scrollValue = percent.toFixed(2).padStart(5, '0').replace('.', ',');
+
     // actualitza el valor i el desplaçament de la barra d'SPI
     if (SPI) SPI.textContent = `${scrollValue}%`;
     if (SPI_BAR) SPI_BAR.style.transform = `translateX(${percent - 100}%)`;
@@ -26,14 +34,15 @@ const initSPI = () => {
 }
 
 // Header & Footer Background-Color Animation
-const initHFColor = () => {
+function initHFColor() {
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
   const MAIN = document.querySelector("main");
   const root = document.documentElement;
+  const colorElements = document.querySelectorAll(".content[data-color]");
   
   // establir el color i el tema
-  const setTheme = (color, theme) => {
+  function setColors(color, theme) {
     header.style.backgroundColor = color;
     footer.style.backgroundColor = color;
     
@@ -44,23 +53,20 @@ const initHFColor = () => {
       root.style.setProperty('--text', '#1d1d1b');
       root.style.setProperty('--bg', '#F5F5F5');
     }
-  };
+  }
 
-  document.querySelectorAll(".content[data-color]").forEach(colorElement => {
+  colorElements.forEach(function(colorElement) {
     const color = colorElement.dataset.color;
     const theme = colorElement.dataset.theme;
 
-    ScrollTrigger.create({
-      trigger: colorElement,
-      start: "top top",
-      end: "bottom 80%",
-      scrub: 1,
-      scroller: MAIN,
-      onEnter: () => setTheme(color, theme),
-      onEnterBack: () => setTheme(color, theme)
-    });
+      ScrollTrigger.create({
+        trigger: colorElement,
+        start: "top top",
+        // end: "bottom 80%",
+        scrub: true,
+        scroller: MAIN,
+        onEnter: function() { setColors(color, theme); },
+        onEnterBack: function() { setColors(color, theme); }
+      });
   });
-};
-
-initSPI();
-initHFColor();
+}

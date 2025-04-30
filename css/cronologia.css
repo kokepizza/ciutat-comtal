@@ -8,8 +8,8 @@
 }
 
 .circle {
-    width: 1rem;
-    height: 1rem;
+    width: .8rem;
+    height: .8rem;
     background-color: var(--text);
     border-radius: 50%;
 }
@@ -89,4 +89,45 @@
 [data-year="12"],
 [data-year="14"] {
     padding-top: 4rem;
+}
+
+@media (min-width: 900px) {
+
+    .years {
+        padding: 1.5rem 0;
+        min-height: calc(100vh - 5rem); 
+        overflow-y: hidden;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+    }
+
+    #cronologia {
+        min-height: 300vh;
+    }
+
+    .circle {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .year {
+        gap: .2rem;
+    
+        h3 {
+            font-size: .8rem;
+        }
+    }
+
+    [data-year] {
+        padding-top: 0;
+    }
+    
+    [data-year="2"],
+    [data-year="4"],
+    [data-year="9"],
+    [data-year="12"],
+    [data-year="14"] {
+        padding-top: 1.5rem;
+    }
 }

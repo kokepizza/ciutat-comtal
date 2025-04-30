@@ -1,7 +1,8 @@
 /* ARCHIVO PRINCIPAL DE JAVASCRIPT */
 console.log("JavaScript carregat correctament.");
 
-import './animations/global.js';
+import { initGlobalAnimations } from './animations/global.js';
+initGlobalAnimations();
 
 if (window.matchMedia("(max-width: 900px)").matches) {
   import('./animations/mobile.js').then((module) => {

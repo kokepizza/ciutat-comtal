@@ -1,5 +1,11 @@
 export function initMobileAnimations() {
 
+  console.log("Init animacions de mòvil");
+
+  initMobileMenu();
+}
+
+function initMobileMenu() {
   const toggleMenu = document.querySelector(".toggle-menu");
   const pagesMenu = document.querySelector(".pages");
   const menuItems = document.querySelectorAll(".pages li");
