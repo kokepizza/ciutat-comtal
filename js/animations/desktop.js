@@ -3,10 +3,11 @@ export function initDesktopAnimations() {
   
   initYearsAnimation();
   initArticlesNav();
+  initHideNav();
 }
 
 function initYearsAnimation() {
-  const CRONO = document.getElementById("cronologia");
+  const CRONO = document.querySelector("#cronologia");
   if (!CRONO) return;
 
   const MAIN = document.querySelector("main");
@@ -64,9 +65,9 @@ function initArticlesNav() {
     if (!TARGET) return;
 
     ScrollTrigger.create({
+      scroller: MAIN,
       trigger: TARGET,
       start: "top top",
-      scroller: MAIN,
       onEnter: () => {
         LINKS.forEach(l =>
           l.classList.remove("active"));
@@ -77,6 +78,44 @@ function initArticlesNav() {
           l.classList.remove("active"));
           link.classList.add("active");
       }
-    })
-  })
+    });
+  });
+}
+
+function initHideNav() {
+  const MAIN = document.querySelector("main");
+  const LINK_PUNT = document.querySelector('a[href="#punt-partida"]');
+  const LINK_COST = document.querySelector('a[href="#cost-viure"]');
+  const LINK_CIUTAT = document.querySelector('a[href="#ciutat-venda"]');
+  const COST = document.querySelector("#cost-viure");
+  const CIUTAT = document.querySelector("#ciutat-venda");
+  const CRONO = document.querySelector("#cronologia");
+  if (!LINK_PUNT || !LINK_COST || !LINK_CIUTAT || !COST || !CIUTAT || !CRONO) return;
+
+  // quan entres a #cost-viure, ocultes l'enllaç a #punt-partida
+  ScrollTrigger.create({
+    scroller: MAIN,
+    trigger: COST,
+    start: "top center",
+    onEnter: () => { LINK_PUNT.classList.add("hide"); },
+    onLeaveBack: () => { LINK_PUNT.classList.remove("hide"); },
+  });
+
+  // quan entres a #ciutat-venda, ocultes l'enllaç a #cost-viure
+  ScrollTrigger.create({
+    scroller: MAIN,
+    trigger: CIUTAT,
+    start: "top center",
+    onEnter: () => { LINK_COST.classList.add("hide"); },
+    onLeaveBack: () => { LINK_COST.classList.remove("hide"); },
+  });
+
+  // quan entres a #cronologia, ocultes l'enllaç a #ciutat-venda
+  ScrollTrigger.create({
+    scroller: MAIN,
+    trigger: CRONO,
+    start: "top center",
+    onEnter: () => { LINK_CIUTAT.classList.add("hide"); },
+    onLeaveBack: () => { LINK_CIUTAT.classList.remove("hide"); },
+  });
 }

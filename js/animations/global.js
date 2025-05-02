@@ -63,10 +63,10 @@ function initHFColor() {
     const THEME = colorElement.dataset.theme;
 
       ScrollTrigger.create({
+        scroller: MAIN,
         trigger: colorElement,
         start: "top top",
         scrub: true,
-        scroller: MAIN,
         onEnter: function() { setColors(COLOR, THEME); },
         onEnterBack: function() { setColors(COLOR, THEME); }
       });
@@ -104,9 +104,9 @@ function initSectionsNav() {
     if (!TARGET) return;
 
     ScrollTrigger.create({
+      scroller: MAIN,
       trigger: TARGET,
       start: "top top",
-      scroller: MAIN,
       onEnter: () => {
         LINKS.forEach(l =>
           l.classList.remove("active"));
