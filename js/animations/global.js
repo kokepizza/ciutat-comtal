@@ -1,8 +1,11 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
+CustomEase.create("scrollEase", "M0,0 C0.2,0 0.1,1 1,1");
+
 export function initGlobalAnimations() {
   initSPI();
   initHFColor();
+  initSectionsNav();
 }
 
 // Scroll Progress Indicator
@@ -35,38 +38,85 @@ function initSPI() {
 
 // Header & Footer Background-Color Animation
 function initHFColor() {
-  const header = document.querySelector("header");
-  const footer = document.querySelector("footer");
+  const HEADER = document.querySelector("header");
+  const FOOTER = document.querySelector("footer");
   const MAIN = document.querySelector("main");
-  const root = document.documentElement;
+  const ROOT = document.documentElement;
   const colorElements = document.querySelectorAll(".content[data-color]");
   
   // establir el color i el tema
   function setColors(color, theme) {
-    header.style.backgroundColor = color;
-    footer.style.backgroundColor = color;
+    HEADER.style.backgroundColor = color;
+    FOOTER.style.backgroundColor = color;
     
     if (theme === "dark") {
-      root.style.setProperty('--text', '#F5F5F5');
-      root.style.setProperty('--bg', '#1D1D1B');
+      ROOT.style.setProperty('--text', '#F5F5F5');
+      ROOT.style.setProperty('--bg', '#1D1D1B');
     } else {
-      root.style.setProperty('--text', '#1d1d1b');
-      root.style.setProperty('--bg', '#F5F5F5');
+      ROOT.style.setProperty('--text', '#1d1d1b');
+      ROOT.style.setProperty('--bg', '#F5F5F5');
     }
   }
 
   colorElements.forEach(function(colorElement) {
-    const color = colorElement.dataset.color;
-    const theme = colorElement.dataset.theme;
+    const COLOR = colorElement.dataset.color;
+    const THEME = colorElement.dataset.theme;
 
       ScrollTrigger.create({
         trigger: colorElement,
         start: "top top",
-        // end: "bottom 80%",
         scrub: true,
         scroller: MAIN,
-        onEnter: function() { setColors(color, theme); },
-        onEnterBack: function() { setColors(color, theme); }
+        onEnter: function() { setColors(COLOR, THEME); },
+        onEnterBack: function() { setColors(COLOR, THEME); }
       });
+  });
+}
+
+// ScrollTo Sections
+function initSectionsNav() {
+  const MAIN = document.querySelector("main");
+  const LINKS = document.querySelectorAll(".pages a");
+
+  function scrollToSection(e) {
+    e.preventDefault();
+    const HREF = this.getAttribute("href");
+    const TARGET = document.querySelector(HREF);
+    if (!TARGET) return;
+
+    // LINKS.forEach(link => link.classList.remove("active"));
+    // this.classList.add("active");
+
+    gsap.to(MAIN, {
+      scrollTo: { y: TARGET, offsetY: -1 },
+      duration: 1,
+      ease: "scrollEase",
+    });
+  }
+
+  LINKS.forEach(function(link) {
+    link.addEventListener("click", scrollToSection);
+  });
+
+  LINKS.forEach(function(link) {
+    const HREF = link.getAttribute("href");
+    const TARGET = document.querySelector(HREF);
+    if (!TARGET) return;
+
+    ScrollTrigger.create({
+      trigger: TARGET,
+      start: "top top",
+      scroller: MAIN,
+      onEnter: () => {
+        LINKS.forEach(l =>
+          l.classList.remove("active"));
+          link.classList.add("active");
+      },
+      onEnterBack: () => {
+        LINKS.forEach(l =>
+          l.classList.remove("active"));
+          link.classList.add("active");
+      }
+    });
   });
 }

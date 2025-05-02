@@ -109,6 +109,10 @@
         }
     }
 
+    .pages a.active {
+        color: var(--text);
+    }
+
     .pages li:first-child {
         border-left: 1px dashed var(--text);
     }

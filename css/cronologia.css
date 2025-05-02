@@ -106,16 +106,16 @@
         min-height: 300vh;
     }
 
-    .circle {
+    /* .circle {
         width: 1rem;
         height: 1rem;
-    }
+    } */
     
     .year {
         gap: .2rem;
     
         h3 {
-            font-size: .8rem;
+            font-size: .9rem;
         }
     }
 

@@ -220,6 +220,10 @@ main {
         }
     }
 
+    #notes-menu a.active {
+        color: var(--text);
+    }
+
     #notes-menu a:not(:last-child) {
         border-bottom: 1px dashed var(--gray);
     }
