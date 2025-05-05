@@ -82,6 +82,7 @@ function initArticlesNav() {
   });
 }
 
+// Ocultar/mostrar Nav #notes
 function initHideNav() {
   const MAIN = document.querySelector("main");
   const LINK_PUNT = document.querySelector('a[href="#punt-partida"]');

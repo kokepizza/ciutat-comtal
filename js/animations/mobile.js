@@ -73,17 +73,30 @@ function initMobileMenu() {
     toggleMenu.addEventListener("click", () => {
 
       if (pagesMenu.classList.contains("active")) {
-        menuTL.reverse();
-        buttonTL.reverse();
+        menuTL.timeScale(2).reverse();
+        buttonTL.timeScale(2).reverse();
         setTimeout(() => {
           pagesMenu.classList.remove("active");
-        }, 800);
+        }, 400);
 
       } else {
         pagesMenu.classList.add("active");
-        menuTL.play();
-        buttonTL.play();
+        menuTL.timeScale(1).play();
+        buttonTL.timeScale(1).play();
       }
+    });
+
+    // Cerrar menú al hacer clic en un menuItem
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        if (pagesMenu.classList.contains("active")) {
+          menuTL.timeScale(2).reverse();
+          buttonTL.timeScale(2).reverse();
+          setTimeout(() => {
+            pagesMenu.classList.remove("active");
+          }, 400);
+        }
+      });
     });
   }
 }
