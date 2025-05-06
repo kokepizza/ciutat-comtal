@@ -1,0 +1,121 @@
+.hidden {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-years {
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: flex-end;
+    padding: 2.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+}
+
+.close-modal {
+    position: absolute;
+    z-index: 10;
+    top: 3.5rem;
+    right: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.04em;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.year-modal {
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+.image-modal {
+    max-height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.image-modal img {
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+
+}
+
+.text-modal p {
+    font-size: 1.5rem;
+    text-align: justify;
+    text-indent: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.img-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.data-modal {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.04em;
+    font-weight: 300;
+}
+
+.data-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+@media (min-width: 900px) {
+    .modal-years {
+        flex-direction: row;
+        gap: 0;
+        background: none;
+        backdrop-filter: none;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .close-modal {
+        right: 3rem;
+    }
+    
+    .year-modal {
+        display: none;
+    }
+
+    .img-data,
+    .text-modal {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin: 0 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .text-modal {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        backdrop-filter: blur(12px);
+
+        p {
+            padding-bottom: 0;
+        }
+    }
+}
