@@ -122,6 +122,10 @@ main {
     padding: 2rem 0 8rem;
 }
 
+#cronologia .title {
+    padding: 2rem 0 4rem;
+}
+
 .text {
     display: flex;
     flex-direction: column;
@@ -131,6 +135,22 @@ main {
 
 #notes-menu {
     display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-years {
+    flex-direction: column;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @media (min-width: 900px) {
