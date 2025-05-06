@@ -50,7 +50,13 @@
 }
 
 /* Roboto Mono */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('/fonts/RobotoMono-VariableFont_wght.woff2') format('woff2'),
+         url('/fonts/RobotoMono-VariableFont_wght.woff') format('woff');
+    font-weight: 100 700;
+    font-style: normal;
+}
 
 html {
     font-family: 'Editorial New', serif;
@@ -147,10 +153,54 @@ main {
 
 .modal-years {
     flex-direction: column;
-    padding: 0 1rem;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 2.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    font-size: 1rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: underline;
+}
+
+.text-modal p {
+    font-size: 1.5rem;
+    text-align: justify;
+    text-indent: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.img-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.data-modal {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.05em;
+    font-weight: 100;
+}
+
+.data-column {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 @media (min-width: 900px) {
