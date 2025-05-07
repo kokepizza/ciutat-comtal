@@ -9,7 +9,7 @@
     height: 2.5rem;
     padding: 0 1rem;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 12px;
     border-bottom: 1px solid var(--gray);
     background-color: var(--light-gray-blue);
@@ -46,6 +46,7 @@
     position: relative;
     z-index: 3;
     color: var(--text);
+    font-weight: 400;
 }
 
 .pages {
@@ -111,6 +112,7 @@
 
     .pages a.active {
         color: var(--text);
+        font-weight: 400;
     }
 
     .pages li:first-child {

@@ -1,0 +1,155 @@
+[
+  {
+    "año": "1995",
+    "img": "/img/1991.jpg",
+    "lloguer": "1.200€",
+    "sou": "1.000€",
+    "cafe": "1,20€",
+    "menu": "10€",
+    "texto": "Este es el texto descriptivo del año 1995."
+  },
+  {
+    "año": "1997",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 1997."
+  },
+  {
+    "año": "1999",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 1999."
+  },
+  {
+    "año": "2001",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2001."
+  },
+  {
+    "año": "2004",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2004."
+  },
+  {
+    "año": "2006",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2006."
+  },
+  {
+    "año": "2008",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2008."
+  },
+  {
+    "año": "2010",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2010."
+  },
+  {
+    "año": "2013",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2013."
+  },
+  {
+    "año": "2015",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2015."
+  },
+  {
+    "año": "2017",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2017."
+  },
+  {
+    "año": "2020",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2020."
+  },
+  {
+    "año": "2021",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2021."
+  },
+  {
+    "año": "2022",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2022."
+  },
+  {
+    "año": "2023",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2023."
+  },
+  {
+    "año": "2024",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2024."
+  },
+  {
+    "año": "2025",
+    "img": "/img/1992.jpg",
+    "lloguer": "1.300€",
+    "sou": "1.050€",
+    "cafe": "1,30€",
+    "menu": "11€",
+    "texto": "Este es el texto descriptivo del año 2025."
+  }
+]

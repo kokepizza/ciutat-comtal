@@ -122,7 +122,44 @@ function initSectionsNav() {
   });
 }
 
-// Obrir / Tancar modal
+// CÀRREGA I ACTUALITZACIÓ DINÀMICA DEL MODAL
+let yearsData = null;
+
+async function fetchYearsData() {
+  if (yearsData) return yearsData;
+  const response = await fetch('data/years.json');
+  yearsData = await response.json();
+  return yearsData;
+}
+
+function updateModalWithYearData(data) {
+  // canvia l'any
+  const yearModal = document.querySelector(".modal-years .year-modal");
+  if (yearModal) yearModal.textContent = data.año;
+
+  // canvia el scr de la imatge i l'alt
+  const imgModal = document.querySelector(".modal-years .image-modal img");
+  if (imgModal) {
+    imgModal.src = data.img;
+    imgModal.alt = data.año;
+  }
+
+  // canvio les dades
+  const lloguer = document.querySelector(".modal-years .lloguer");
+  const sou = document.querySelector(".modal-years .sou");
+  const cafe = document.querySelector(".modal-years .cafe");
+  const menu = document.querySelector(".modal-years .menu");
+  if (lloguer) lloguer.textContent = data.lloguer;
+  if (sou) sou.textContent = data.sou;
+  if (cafe) cafe.textContent = data.cafe;
+  if (menu) menu.textContent = data.menu;
+
+  // canvio el text
+  const textModal = document.querySelector(".modal-years .text-modal");
+  if (textModal) textModal.innerHTML = `<p>${data.texto}</p>`;
+}
+
+// obrir / tancar modal i carregar les dades dinàmicament
 function openModal() {
   const modal = document.querySelector(".modal-years");
   const yearButtons = document.querySelectorAll("button.year");
@@ -138,13 +175,21 @@ function openModal() {
     closeModal.style.pointerEvents = "auto";
   }
 
-  // restauro els pointrEvents
+  // restauro els pointerEvents
   function enablePointerEvents() {
-    header.style.pointerEvents = "auto";
+    header.style.pointerEvents = "";
+    modal.style.pointerEvents = "";
+    closeModal.style.pointerEvents = "";
   }
 
   yearButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
+      // carrego .json i actualitzo el modal
+      const yearIndex = parseInt(button.getAttribute("data-year"), 10) - 1;
+      const data = await fetchYearsData();
+      if (data[yearIndex]) {
+        updateModalWithYearData(data[yearIndex]);
+      }
       modal.classList.remove("hidden");
       setTimeout(() => {
         modal.classList.add("open");
@@ -160,5 +205,4 @@ function openModal() {
       enablePointerEvents();
     });
   });
-
 }
