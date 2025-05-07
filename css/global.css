@@ -140,12 +140,9 @@ main {
 
 #reflexio {
     position: relative;
-    height: 200dvh;
+    height: 200vh;
     width: 100dvw;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    pointer-events: none;
 }
 
 #reflexio h2 {
@@ -160,6 +157,7 @@ main {
     padding: 0 1rem;
     z-index: 2;
     max-width: 1000px;
+    user-select: none;
 }
 
 @media (min-width: 900px) {
