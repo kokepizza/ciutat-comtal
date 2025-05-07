@@ -97,6 +97,10 @@ footer {
     background-color: var(--light-pinky-red);
 }
 
+[data-color="var(--bg)"] {
+    background-color: var(--bg);
+}
+
 main {
     position: fixed;
     top: 2.5rem;

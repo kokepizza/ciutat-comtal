@@ -75,7 +75,7 @@ function initHFColor() {
   });
 }
 
-// ScrollTo Sections
+// ScrollTo Plugin
 function initSectionsNav() {
   const MAIN = document.querySelector("main");
   const LINKS = document.querySelectorAll(".pages a");
@@ -85,9 +85,6 @@ function initSectionsNav() {
     const HREF = this.getAttribute("href");
     const TARGET = document.querySelector(HREF);
     if (!TARGET) return;
-
-    // LINKS.forEach(link => link.classList.remove("active"));
-    // this.classList.add("active");
 
     gsap.to(MAIN, {
       scrollTo: { y: TARGET, offsetY: -1 },
@@ -110,14 +107,12 @@ function initSectionsNav() {
       trigger: TARGET,
       start: "top top",
       onEnter: () => {
-        LINKS.forEach(l =>
-          l.classList.remove("active"));
-          link.classList.add("active");
+        LINKS.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
       },
       onEnterBack: () => {
-        LINKS.forEach(l =>
-          l.classList.remove("active"));
-          link.classList.add("active");
+        LINKS.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
       }
     });
   });
@@ -126,6 +121,7 @@ function initSectionsNav() {
 // CÀRREGA I ACTUALITZACIÓ DINÀMICA DEL MODAL
 let yearsData = null;
 
+// demano les dades dels anys al JSON
 async function fetchYearsData() {
   if (yearsData) return yearsData;
   const response = await fetch('data/years.json');
@@ -133,10 +129,22 @@ async function fetchYearsData() {
   return yearsData;
 }
 
+let originalCronologiaTitle = null;
+
+// omple el modal amb les dades de l'any seleccionat
 function updateModalWithYearData(data) {
   // canvia l'any
-  const yearModal = document.querySelector(".modal-years .year-modal");
+  const yearModal = document.querySelector(".year-modal");
   if (yearModal) yearModal.textContent = data.año;
+
+  // NUEVO: actualiza el h2 de la cronología
+  const cronologiaTitle = document.querySelector("#cronologia .title h2");
+  if (cronologiaTitle) {
+    if (originalCronologiaTitle === null) {
+      originalCronologiaTitle = cronologiaTitle.textContent;
+    }
+    cronologiaTitle.textContent = data.año;
+  }
 
   // canvia el scr de la imatge i l'alt
   const imgModal = document.querySelector(".modal-years .image-modal img");
@@ -146,21 +154,21 @@ function updateModalWithYearData(data) {
   }
 
   // canvio les dades
-  const lloguer = document.querySelector(".modal-years .lloguer");
-  const sou = document.querySelector(".modal-years .sou");
-  const cafe = document.querySelector(".modal-years .cafe");
-  const menu = document.querySelector(".modal-years .menu");
+  const lloguer = document.querySelector(".lloguer");
+  const sou = document.querySelector(".sou");
+  const cafe = document.querySelector(".cafe");
+  const menu = document.querySelector(".menu");
   if (lloguer) lloguer.textContent = data.lloguer;
   if (sou) sou.textContent = data.sou;
   if (cafe) cafe.textContent = data.cafe;
   if (menu) menu.textContent = data.menu;
 
   // canvio el text
-  const textModal = document.querySelector(".modal-years .text-modal");
+  const textModal = document.querySelector(".text-modal");
   if (textModal) textModal.innerHTML = `<p>${data.texto}</p>`;
 }
 
-// obrir / tancar modal i carregar les dades dinàmicament
+// obrir i tancar modal i carregar les dades dinàmicament
 function openModal() {
   const modal = document.querySelector(".modal-years");
   const yearButtons = document.querySelectorAll("button.year");
@@ -204,6 +212,12 @@ function openModal() {
     setTimeout(() => {
       modal.classList.add("hidden");
       enablePointerEvents();
+      // Restaurar el texto original del h2 de cronologia
+      const cronologiaTitle = document.querySelector("#cronologia .title h2");
+      if (cronologiaTitle && originalCronologiaTitle !== null) {
+        cronologiaTitle.textContent = originalCronologiaTitle;
+        originalCronologiaTitle = null;
+      }
     });
   });
 }
