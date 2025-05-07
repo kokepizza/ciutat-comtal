@@ -6,6 +6,7 @@ export function initGlobalAnimations() {
   initSPI();
   initHFColor();
   initSectionsNav();
+  openModal();
 }
 
 // Scroll Progress Indicator
@@ -119,4 +120,45 @@ function initSectionsNav() {
       }
     });
   });
+}
+
+// Obrir / Tancar modal
+function openModal() {
+  const modal = document.querySelector(".modal-years");
+  const yearButtons = document.querySelectorAll("button.year");
+  const closeModal = document.querySelector(".close-modal");
+  const header = document.querySelector(".pages");
+
+  if (!modal || !closeModal) return;
+
+  // deshabilito el header
+  function disablePointerEvents() {
+    header.style.pointerEvents = "none";
+    modal.style.pointerEvents = "auto";
+    closeModal.style.pointerEvents = "auto";
+  }
+
+  // restauro els pointrEvents
+  function enablePointerEvents() {
+    header.style.pointerEvents = "auto";
+  }
+
+  yearButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      setTimeout(() => {
+        modal.classList.add("open");
+        disablePointerEvents();
+      });
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("open");
+    setTimeout(() => {
+      modal.classList.add("hidden");
+      enablePointerEvents();
+    });
+  });
+
 }

@@ -16,8 +16,7 @@
     left: 0;
     width: 100dvw;
     height: 100dvh;
-    background: rgba(255, 255, 255, .4);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(1rem);
     z-index: 100;
 }
 
@@ -40,7 +39,6 @@
 }
 
 .image-modal {
-    max-height: 400px;
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -48,10 +46,10 @@
 }
 
 .image-modal img {
-    max-height: 100%;
+    max-height: 400px;
     display: block;
     object-fit: contain;
-
+    user-select: none;
 }
 
 .text-modal p {
@@ -104,15 +102,19 @@
         display: flex;
         flex: 1;
         justify-content: flex-end;
-        margin: 0 1.5rem;
-        padding-bottom: 1.5rem;
+        margin: 0 .5rem;
+        padding: 0 1rem 1.5rem;
+    }
+
+    .img-data {
+        gap: 2rem;
     }
 
     .text-modal {
         display: flex;
         flex-direction: column;
         height: 100%;
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(1rem);
 
         p {
             padding-bottom: 0;
