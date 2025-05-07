@@ -235,13 +235,13 @@ function initReflexioAnimation() {
 
   // Estado inicial
   gsap.set(H2, { 
-    opacity: 0, 
+    autoAlpha: 0, 
     scale: 0.4, 
     filter: "blur(4rem)" 
   });
 
   gsap.to(H2, {
-    opacity: 1,
+    autoAlpha: 1,
     scale: 1,
     filter: "blur(0px)",
     ease: "power3.out",
