@@ -7,6 +7,7 @@ export function initGlobalAnimations() {
   initHFColor();
   initSectionsNav();
   openModal();
+  initReflexioAnimation();
 }
 
 // Scroll Progress Indicator
@@ -222,5 +223,34 @@ function openModal() {
         originalCronologiaTitle = null;
       }
     });
+  });
+}
+
+// animació de la reflexió final
+function initReflexioAnimation() {
+  const MAIN = document.querySelector("main");
+  const SECTION = document.querySelector("#reflexio");
+  const H2 = document.querySelector("#reflexio h2");
+  if (!SECTION || !H2) return;
+
+  // Estado inicial
+  gsap.set(H2, { 
+    opacity: 0, 
+    scale: 0.4, 
+    filter: "blur(4rem)" 
+  });
+
+  gsap.to(H2, {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)",
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: SECTION,
+      scroller: MAIN,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+    }
   });
 }

@@ -1,10 +1,10 @@
 :root {
     --text: #1D1D1B;
     --bg: #F5F5F5;
-    --gray: #959589;
-    --light-gray-blue: #EAF1F7;
-    --light-orange: #FFF1DD;
-    --light-pinky-red: #fbe4e5;
+    --gray: #e3e3e0;
+    --light-gray-blue: #7474ce;
+    --light-orange: #ef8a37;
+    --light-pinky-red: #d05954;
 }
 
 /* Headings */
@@ -138,6 +138,30 @@ main {
     display: none;
 }
 
+#reflexio {
+    position: relative;
+    height: 200vh;
+    width: 100dvw;
+    display: block;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reflexio h2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 17vw;
+    line-height: 1;
+    text-align: center;
+    z-index: 2;
+    max-width: 1000px;
+}
+
 @media (min-width: 900px) {
 
     .content {
@@ -154,7 +178,7 @@ main {
         top: 0;
         bottom: 0;
         width: 1px;
-        background: var(--gray);
+        background: var(--text);
     }
 
     .content::before {
@@ -171,7 +195,7 @@ main {
         bottom: 0;
         left: 50%;
         width: 1px;
-        background: var(--gray);
+        background: var(--text);
         transform: translateX(-50%);
     }
 
@@ -214,7 +238,7 @@ main {
 
     #notes-menu a {
         display: block;
-        padding-right: 8rem;
+        padding-right: 4rem;
         color: var(--gray);
         transition: color 0.3s ease;
 
@@ -240,5 +264,9 @@ main {
         opacity: 0;
         pointer-events: none;
         user-select: none;
+    }
+
+    #reflexio h2 {
+        font-size: 7.5vw;
     }
 }

@@ -11,7 +11,7 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 12px;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid var(--text);
     background-color: var(--light-gray-blue);
 }
 
@@ -112,7 +112,7 @@
 
     .pages a.active {
         color: var(--text);
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .pages li:first-child {
