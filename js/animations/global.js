@@ -49,7 +49,8 @@ function initHFColor() {
   function setColors(color, theme) {
     HEADER.style.backgroundColor = color;
     FOOTER.style.backgroundColor = color;
-    
+    document.documentElement.style.backgroundColor = color; // aplicat també al html per que es canvïi el color de les franges superior i inferior del mòvil
+
     if (theme === "dark") {
       ROOT.style.setProperty('--text', '#F5F5F5');
       ROOT.style.setProperty('--bg', '#1D1D1B');
