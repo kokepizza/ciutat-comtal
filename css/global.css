@@ -71,7 +71,7 @@ i {
 
 p {
     font-size: 1.5rem;
-    /* text-align: justify; */
+    text-align: justify;
     text-indent: 7.5rem;
 }
 
@@ -143,7 +143,6 @@ main {
     height: 200vh;
     width: 100dvw;
     display: block;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,6 +157,7 @@ main {
     font-size: 17vw;
     line-height: 1;
     text-align: center;
+    padding: 0 1rem;
     z-index: 2;
     max-width: 1000px;
 }
