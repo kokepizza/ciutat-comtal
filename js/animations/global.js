@@ -237,7 +237,9 @@ function initReflexioAnimation() {
   gsap.set(H2, { 
     autoAlpha: 0, 
     scale: 0.4, 
-    filter: "blur(4rem)" 
+    filter: "blur(4rem)",
+    xPercent: -50,
+    yPercent: -50
   });
 
   gsap.to(H2, {
