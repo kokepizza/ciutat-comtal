@@ -174,21 +174,24 @@ function openModal() {
   const yearButtons = document.querySelectorAll("button.year");
   const closeModal = document.querySelector(".close-modal");
   const header = document.querySelector(".pages");
+  const main = document.querySelector("main");
 
   if (!modal || !closeModal) return;
 
   // deshabilito el header
-  function disablePointerEvents() {
+  function disableInteraction() {
     header.style.pointerEvents = "none";
     modal.style.pointerEvents = "auto";
     closeModal.style.pointerEvents = "auto";
+    main.style.overflowY = "hidden";
   }
 
   // restauro els pointerEvents
-  function enablePointerEvents() {
+  function enableInteraction() {
     header.style.pointerEvents = "";
     modal.style.pointerEvents = "";
     closeModal.style.pointerEvents = "";
+    main.style.overflowY = "";
   }
 
   yearButtons.forEach(button => {
@@ -202,7 +205,7 @@ function openModal() {
       modal.classList.remove("hidden");
       setTimeout(() => {
         modal.classList.add("open");
-        disablePointerEvents();
+        disableInteraction();
       });
     });
   });
@@ -211,7 +214,7 @@ function openModal() {
     modal.classList.remove("open");
     setTimeout(() => {
       modal.classList.add("hidden");
-      enablePointerEvents();
+      enableInteraction();
       // Restaurar el texto original del h2 de cronologia
       const cronologiaTitle = document.querySelector("#cronologia .title h2");
       if (cronologiaTitle && originalCronologiaTitle !== null) {
