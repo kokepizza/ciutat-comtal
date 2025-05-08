@@ -97,7 +97,7 @@ function initHideNav() {
   ScrollTrigger.create({
     scroller: MAIN,
     trigger: COST,
-    start: "top center",
+    start: "top top",
     onEnter: () => { LINK_PUNT.classList.add("hide"); },
     onLeaveBack: () => { LINK_PUNT.classList.remove("hide"); },
   });
@@ -106,7 +106,7 @@ function initHideNav() {
   ScrollTrigger.create({
     scroller: MAIN,
     trigger: CIUTAT,
-    start: "top center",
+    start: "top top",
     onEnter: () => { LINK_COST.classList.add("hide"); },
     onLeaveBack: () => { LINK_COST.classList.remove("hide"); },
   });
@@ -115,7 +115,7 @@ function initHideNav() {
   ScrollTrigger.create({
     scroller: MAIN,
     trigger: CRONO,
-    start: "top center",
+    start: "top top",
     onEnter: () => { LINK_CIUTAT.classList.add("hide"); },
     onLeaveBack: () => { LINK_CIUTAT.classList.remove("hide"); },
   });

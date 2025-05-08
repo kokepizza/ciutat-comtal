@@ -1,155 +1,155 @@
 [
   {
     "año": "1995",
-    "img": "/img/1991.jpg",
-    "lloguer": "1.200€",
-    "sou": "1.000€",
-    "cafe": "1,20€",
-    "menu": "10€",
-    "texto": "Este es el texto descriptivo del año 1995."
+    "img": "/img/1995.webp",
+    "lloguer": "322,60€",
+    "sou": "752,31€",
+    "cafe": "0,58€",
+    "menu": "6,06€",
+    "texto": "Barcelona viu un ambient d’esperança. S’intueix la recuperació econòmica després d’anys difícils. La ciutat encara respira l’energia olímpica i es consolida com a referent cultural i europeu. Les desigualtats, però, continuen presents i el mercat laboral és fràgil."
   },
   {
     "año": "1997",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 1997."
+    "img": "/img/1997.webp",
+    "lloguer": "361,13€",
+    "sou": "853,75€",
+    "cafe": "0,69€",
+    "menu": "6,77€",
+    "texto": "Amb l’entrada a l’euro cada cop més a prop, es respira estabilitat. Hi ha cert optimisme social, tot i que l’atur continua sent alt. A Barcelona es veuen les primeres grans transformacions urbanes post-92 i augmenta l’atracció turística."
   },
   {
     "año": "1999",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 1999."
+    "img": "/img/1999.webp",
+    "lloguer": "402,76€",
+    "sou": "653,60€",
+    "cafe": "0,76€",
+    "menu": "7,13€",
+    "texto": "Barcelona viu una transició cap al nou mil·lenni amb entusiasme. L’euro ja és una realitat administrativa i l’economia sembla robusta. La ciutat continua obrint-se al món i els barris comencen a notar els efectes de la globalització."
   },
   {
     "año": "2001",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2001."
+    "img": "/img/2001.webp",
+    "lloguer": "466,30€",
+    "sou": "1.057,42€",
+    "cafe": "0,85€",
+    "menu": "7,61€",
+    "texto": "Comença una dècada marcada per l’expansió urbanística. L’economia funciona, la construcció creix i molta gent accedeix a l’habitatge. Però també es generen bombolles i desigualtats. A Barcelona, s’amplien infraestructures i s’incrementa la pressió turística."
   },
   {
     "año": "2004",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2004."
+    "img": "/img/2004.webp",
+    "lloguer": "584,79€",
+    "sou": "1.192,90€",
+    "cafe": "1,04€",
+    "menu": "8,29€",
+    "texto": "Es respira eufòria immobiliària. Barcelona es transforma físicament: nous barris, noves línies de metro, nova costa. L’economia sembla estable, però s’està gestant una crisi silenciosa. El turisme ja forma part essencial del paisatge quotidià."
   },
   {
     "año": "2006",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2006."
+    "img": "/img/2006.webp",
+    "lloguer": "695,77€",
+    "sou": "1.254,35€",
+    "cafe": "1,10€",
+    "menu": "8,47€",
+    "texto": "El creixement sembla imparable. A Barcelona tot va de pressa: preus en augment, sous que no sempre acompanyen. Es viuen anys de consum i confiança. Però darrere la façana, comencen a aparèixer esquerdes socials i d’habitatge."
   },
   {
     "año": "2008",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2008."
+    "img": "/img/2008.webp",
+    "lloguer": "813,02€",
+    "sou": "1.359,23€",
+    "cafe": "1,27€",
+    "menu": "9,16€",
+    "texto": "Tot s’atura de sobte. L’eufòria s’esvaeix amb la crisi global. A Barcelona, molts joves perden la feina, i les hipoteques pesen com mai. L’ambient és d’incertesa i de resistència. El centre de la ciutat comença a canviar ràpidament."
   },
   {
-    "año": "2010",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2010."
+    "año": "2011",
+    "img": "/img/2011.webp",
+    "lloguer": "761,92€",
+    "sou": "1.308,71€",
+    "cafe": "1,14€",
+    "menu": "8,80€",
+    "texto": "En plena crisi, Barcelona es veu afectada per retallades, atur i precarietat. El carrer es converteix en espai de protesta. Les desigualtats es fan més evidents, i la confiança en les institucions disminueix. Es comença a parlar d’indignació col·lectiva."
   },
   {
     "año": "2013",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2013."
+    "img": "/img/2013.webp",
+    "lloguer": "681,63€",
+    "sou": "1.251,29€",
+    "cafe": "1,16€",
+    "menu": "8,89€",
+    "texto": "La crisi encara no ha acabat. Molts han marxat o han tornat a casa. Neixen iniciatives alternatives, projectes col·lectius i una nova consciència social. A Barcelona, lloguers baixos atrauen nous residents i artistes. Comença a canviar l’essència dels barris."
   },
   {
     "año": "2015",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2015."
+    "img": "/img/2015.webp",
+    "lloguer": "743,89€",
+    "sou": "1.307,45€",
+    "cafe": "1,20€",
+    "menu": "9,05€",
+    "texto": "Es percep una lleugera recuperació econòmica. Barcelona viu un auge del turisme i l’emergència habitacional creix. El debat sobre la ciutat com a espai per viure-hi o consumir-hi pren força. La política municipal es transforma amb noves cares al poder."
   },
   {
     "año": "2017",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2017."
+    "img": "/img/2017.webp",
+    "lloguer": "877,28€",
+    "sou": "1.402,61€",
+    "cafe": "1,24€",
+    "menu": "9,78€",
+    "texto": "Un any intens. Barcelona viu l’impacte del referèndum de l’1 d’octubre i les càrregues policials. L’atemptat a la Rambla commociona la ciutat. Malgrat tot, la vida continua i la societat s’organitza. La ciutat mostra el seu caràcter resistent i divers."
   },
   {
     "año": "2020",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2020."
+    "img": "/img/2020.webp",
+    "lloguer": "964,80€",
+    "sou": "1.503,67€",
+    "cafe": "1,29€",
+    "menu": "10,15€",
+    "texto": "La pandèmia ho canvia tot. Barcelona queda en silenci durant setmanes. El turisme desapareix i la ciutat recupera espais per als veïns. Però també es fa evident la dependència del sector serveis i les fragilitats socials. És un any de pausa i reflexió."
   },
   {
     "año": "2021",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2021."
+    "img": "/img/2021.webp",
+    "lloguer": "918,84€",
+    "sou": "1.554,06€",
+    "cafe": "1,32€",
+    "menu": "10,64€",
+    "texto": "Amb les vacunes comença la reobertura. Hi ha ganes de tornar a sortir, però l’impacte econòmic encara pesa. Barcelona torna a omplir-se de vida, però amb noves normes i temors. El teletreball i l’espai públic cobren nous significats."
   },
   {
     "año": "2022",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2022."
+    "img": "/img/2022.webp",
+    "lloguer": "1.026,91€",
+    "sou": "1.602,18€",
+    "cafe": "1,35€",
+    "menu": "11,03€",
+    "texto": "Es nota un retorn accelerat a la normalitat. El turisme torna amb força, però la inflació fa estralls en les butxaques. Es parla molt del preu del cafè i dels menús. La ciutat lluita per preservar la seva identitat."
   },
   {
     "año": "2023",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2023."
+    "img": "/img/2023.webp",
+    "lloguer": "1.136,45€",
+    "sou": "1.675,33€",
+    "cafe": "1,37€",
+    "menu": "14,72€",
+    "texto": "Barcelona viu tensions entre la recuperació econòmica i la dificultat per arribar a final de mes. Els lloguers i els preus s’han disparat. La ciutat és atractiva per a molts, però cada cop més cara per als qui hi viuen."
   },
   {
     "año": "2024",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2024."
+    "img": "/img/2024.webp",
+    "lloguer": "1.193,08€",
+    "sou": "1.712,91€",
+    "cafe": "1,42€",
+    "menu": "15,14€",
+    "texto": "S’intensifica el debat sobre el model de ciutat. Els projectes verds i socials s’enfronten a l’especulació. Barcelona aposta per la sostenibilitat, però amb desigualtats creixents. L’economia aguanta, però el malestar social és palpable, sobretot entre joves."
   },
   {
     "año": "2025",
-    "img": "/img/1992.jpg",
-    "lloguer": "1.300€",
-    "sou": "1.050€",
-    "cafe": "1,30€",
-    "menu": "11€",
-    "texto": "Este es el texto descriptivo del año 2025."
+    "img": "/img/2025.webp",
+    "lloguer": "1.238,57€",
+    "sou": "1.755,59€",
+    "cafe": "1,47€",
+    "menu": "15,98€",
+    "texto": "Barcelona mira al futur amb incertesa i esperança. La ciutat continua reinventant-se, però les ferides de les crisis passades encara pesen. L’habitatge i el cost de vida segueixen sent reptes centrals. La gent busca estabilitat i una vida més digna."
   }
 ]

@@ -7,6 +7,9 @@
 }
 
 .modal-years {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.04em;
+    font-weight: 400;
     flex-direction: column;
     gap: 3rem;
     justify-content: flex-end;
@@ -25,9 +28,6 @@
     z-index: 10;
     top: 3.5rem;
     right: 1rem;
-    font-family: 'Roboto Mono', monospace;
-    letter-spacing: -0.04em;
-    font-weight: 300;
     text-decoration: underline;
 }
 
@@ -53,6 +53,8 @@
 }
 
 .text-modal p {
+    font-family: 'Editorial New', serif;
+    font-weight: 400;
     font-size: 1.5rem;
     text-align: justify;
     text-indent: 5rem;
@@ -69,15 +71,19 @@
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    font-family: 'Roboto Mono', monospace;
-    letter-spacing: -0.04em;
-    font-weight: 300;
 }
 
 .data-column {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+}
+
+.lloguer,
+.sou,
+.cafe,
+.menu {
+    font-weight: 700;;
 }
 
 @media (min-width: 900px) {
@@ -118,6 +124,7 @@
 
         p {
             padding-bottom: 0;
+            font-size: 2rem;
         }
     }
 }
