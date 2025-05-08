@@ -233,7 +233,6 @@ function initReflexioAnimation() {
   const H2 = document.querySelector("#reflexio h2");
   if (!SECTION || !H2) return;
 
-  // Estado inicial
   gsap.set(H2, { 
     autoAlpha: 0, 
     scale: 0.4, 
