@@ -176,6 +176,7 @@ function openModal() {
   const closeModal = document.querySelector(".close-modal");
   const header = document.querySelector(".pages");
   const main = document.querySelector("main");
+  const graphsButton = document.querySelector(".graphs-button"); // <-- Añadido
 
   if (!modal || !closeModal) return;
 
@@ -185,6 +186,7 @@ function openModal() {
     modal.style.pointerEvents = "auto";
     closeModal.style.pointerEvents = "auto";
     main.style.overflowY = "hidden";
+    graphsButton.style.display = "none"; // oculto el botó de gráficas
   }
 
   // restauro els pointerEvents
@@ -193,6 +195,7 @@ function openModal() {
     modal.style.pointerEvents = "";
     closeModal.style.pointerEvents = "";
     main.style.overflowY = "";
+    graphsButton.style.display = ""; 
   }
 
   yearButtons.forEach(button => {
