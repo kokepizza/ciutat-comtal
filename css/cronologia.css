@@ -94,16 +94,15 @@
 @media (min-width: 900px) {
 
     .years {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 30rem 0;
         min-height: calc(100vh - 5rem); 
-        overflow-y: hidden;
         position: sticky;
         top: 0;
         height: fit-content;
     }
 
     #cronologia {
-        min-height: 300vh;
+        min-height: 600vh;
     }
     
     .year {
