@@ -1,0 +1,82 @@
+                        <svg width="550" height="297" viewBox="0 0 550 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g class="cafe-graph">
+                                <path d="M5 275L41 241.5L77 219.5L113 193L167.5 135.5L203.5 117.5L239.5 66L293 105L330 99L366 87L401.5 75L456 60L474 51L492 42L510 36L528 20.5L547 5" stroke="var(--light-gray-blue)" stroke-width="2"/>
+                                <circle cx="5" cy="275" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="41" cy="241" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="77" cy="220" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="113" cy="193" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="167" cy="135" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="203" cy="117" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="240" cy="66" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="294" cy="105" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="330" cy="99" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="366" cy="87" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="402" cy="75" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="456" cy="60" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="474" cy="51" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="492" cy="42" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="510" cy="36" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="528" cy="21" r="3" fill="var(--light-gray-blue)"/>
+                                <circle cx="546" cy="5" r="3" fill="var(--light-gray-blue)"/>
+                            </g>
+                            <g class="menu-graph">
+                                <path d="M5.5 276.5L41 256.5L77 246.5L113 234L166.5 215L204 210.5L240 191L294 201.5L331 199.5L365.5 194.5L402 175L456 165L474 151L492.5 140.5L510.5 41L528 29.5L546.5 7" stroke="green" stroke-width="2"/>
+                                <circle cx="5" cy="276" r="3" fill="green"/>
+                                <circle cx="41" cy="256" r="3" fill="green"/>
+                                <circle cx="77" cy="246" r="3" fill="green"/>
+                                <circle cx="113" cy="234" r="3" fill="green"/>
+                                <circle cx="167" cy="215" r="3" fill="green"/>
+                                <circle cx="204" cy="210" r="3" fill="green"/>
+                                <circle cx="240" cy="191" r="3" fill="green"/>
+                                <circle cx="294" cy="201" r="3" fill="green"/>
+                                <circle cx="330" cy="199" r="3" fill="green"/>
+                                <circle cx="366" cy="194" r="3" fill="green"/>
+                                <circle cx="402" cy="175" r="3" fill="green"/>
+                                <circle cx="456" cy="165" r="3" fill="green"/>
+                                <circle cx="474" cy="151" r="3" fill="green"/>
+                                <circle cx="492" cy="141" r="3" fill="green"/>
+                                <circle cx="510" cy="41" r="3" fill="green"/>
+                                <circle cx="528" cy="29" r="3" fill="green"/>
+                                <circle cx="546" cy="7" r="3" fill="green"/>
+                            </g>
+                            <g class="lloguer-graph">
+                                <path d="M5 281L41 270.5L77 258.5L113 239L167 204L203 172L239 138L294 152L330 176L366 158L402 119L456 93L474 106.5L492 75L510 43L528 26L546.5 13" stroke="var(--light-orange)" stroke-width="2"/>
+                                <circle cx="5" cy="281" r="3" fill="var(--light-orange)"/>
+                                <circle cx="41" cy="270" r="3" fill="var(--light-orange)"/>
+                                <circle cx="77" cy="258" r="3" fill="var(--light-orange)"/>
+                                <circle cx="113" cy="239" r="3" fill="var(--light-orange)"/>
+                                <circle cx="167" cy="204" r="3" fill="var(--light-orange)"/>
+                                <circle cx="203" cy="172" r="3" fill="var(--light-orange)"/>
+                                <circle cx="239" cy="138" r="3" fill="var(--light-orange)"/>
+                                <circle cx="294" cy="152" r="3" fill="var(--light-orange)"/>
+                                <circle cx="330" cy="176" r="3" fill="var(--light-orange)"/>
+                                <circle cx="366" cy="158" r="3" fill="var(--light-orange)"/>
+                                <circle cx="402" cy="119" r="3" fill="var(--light-orange)"/>
+                                <circle cx="456" cy="93" r="3" fill="var(--light-orange)"/>
+                                <circle cx="474" cy="106" r="3" fill="var(--light-orange)"/>
+                                <circle cx="492" cy="75" r="3" fill="var(--light-orange)"/>
+                                <circle cx="510" cy="43" r="3" fill="var(--light-orange)"/>
+                                <circle cx="528" cy="26" r="3" fill="var(--light-orange)"/>
+                                <circle cx="546" cy="13" r="3" fill="var(--light-orange)"/>
+                            </g>
+                            <g class="sou-graph">
+                                <path d="M2.5 294.5L38.5 265L75 236L111.5 205.5L166 166.5L202.5 148.5L238.5 118L293 133L329.5 150.5L365.5 133L401.5 105.5L456 76.5L474.5 61.5L493 48L510.5 26.5L529 15.5L547 3" stroke="var(--light-pinky-red)" stroke-width="2"/>
+                                <circle cx="3" cy="294" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="39" cy="264" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="75" cy="235" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="111" cy="205" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="166" cy="166" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="202" cy="148" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="239" cy="118" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="293" cy="133" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="329" cy="149" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="365" cy="133" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="402" cy="105" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="456" cy="76" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="474" cy="61" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="493" cy="48" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="511" cy="26" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="529" cy="15" r="3" fill="var(--light-pinky-red)"/>
+                                <circle cx="547" cy="3" r="3" fill="var(--light-pinky-red)"/>
+                            </g>
+                        </svg>
