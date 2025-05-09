@@ -142,7 +142,8 @@
 }
 
 .graph-controls {
-    font-family: 'Suisse Intl', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
     display: flex;
     flex-direction: row;
     gap: 2rem;

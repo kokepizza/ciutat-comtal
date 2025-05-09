@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase, SplitText);
 
 CustomEase.create("scrollEase", "M0,0 C0.2,0 0.1,1 1,1");
 
@@ -6,9 +6,10 @@ export function initGlobalAnimations() {
   initSPI();
   initHFColor();
   initSectionsNav();
-  openModal();
-  openGraphsModal(); // <-- Añadido aquí
+  openYearsModal();
+  openGraphsModal();
   initReflexioAnimation();
+  animateDataText();
 }
 
 // Scroll Progress Indicator
@@ -171,7 +172,7 @@ function updateModalWithYearData(data) {
 }
 
 // obrir i tancar modal i carregar les dades dinàmicament
-function openModal() {
+function openYearsModal() {
   const modal = document.querySelector(".modal-years");
   const yearButtons = document.querySelectorAll("button.year");
   const closeModal = document.querySelector(".close-modal");
@@ -206,6 +207,24 @@ function openModal() {
       const data = await fetchYearsData();
       if (data[yearIndex]) {
         updateModalWithYearData(data[yearIndex]);
+        // ANIMACIÓN: cada dato aparece uno tras otro
+        const elements = [
+          document.querySelector(".lloguer"),
+          document.querySelector(".sou"),
+          document.querySelector(".cafe"),
+          document.querySelector(".menu")
+        ];
+        
+        const tl = gsap.timeline();
+        elements.forEach((el, i) => {
+          if (el) {
+            tl.fromTo(el,
+              { autoAlpha: 0, y: 30 },
+              { autoAlpha: 1, y: 0, duration: 0.5, ease: "back.out(1.7)" },
+              i * 0.4 // delay per cada un
+            );
+          }
+        });
       }
       modal.classList.remove("hidden");
       setTimeout(() => {
@@ -220,12 +239,21 @@ function openModal() {
     setTimeout(() => {
       modal.classList.add("hidden");
       enableInteraction();
-      // Restaurar el texto original del h2 de cronologia
+      // restaurar el text original del h2 de cronologia
       const cronologiaTitle = document.querySelector("#cronologia .title h2");
       if (cronologiaTitle && originalCronologiaTitle !== null) {
         cronologiaTitle.textContent = originalCronologiaTitle;
         originalCronologiaTitle = null;
       }
+      // netejar el SplitText al tancar el modal
+      [".lloguer", ".sou", ".cafe", ".menu"].forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+          if (el._splitText) {
+            el._splitText.revert();
+            el._splitText = null;
+          }
+        });
+      });
     });
   });
 }
@@ -261,7 +289,7 @@ function initReflexioAnimation() {
 }
 
 
-// Abrir y cerrar el modal de gráficas
+// obrir i tancar el modal de les gràfiques
 function openGraphsModal() {
   const modalGraphs = document.querySelector(".modal-graphs");
   const graphsButton = document.querySelector(".graphs-button");
@@ -293,7 +321,7 @@ function openGraphsModal() {
       modalGraphs.classList.add("open");
       disableInteractionGraphs();
     });
-    // Sincroniza el estado de los paths con los checkboxes al abrir el modal
+
     document.querySelectorAll('.toggle-svg').forEach(toggle => {
       const graphClass = toggle.dataset.graph;
       const path = document.querySelector(`.${graphClass}`);
@@ -311,7 +339,7 @@ function openGraphsModal() {
     });
   });
 
-  // Listeners para mostrar/ocultar paths según el checkbox
+  // escolta el check dels checkboxes per mostrar la gràfica corresponent
   document.querySelectorAll('.toggle-svg').forEach(toggle => {
     toggle.addEventListener('change', function() {
       const graphClass = this.dataset.graph;
@@ -319,6 +347,26 @@ function openGraphsModal() {
       if (path) {
         path.style.display = this.checked ? '' : 'none';
       }
+    });
+  });
+}
+
+// SplitText per animar les dades
+function animateDataText() {
+  const selectors = [".lloguer", ".sou", ".menu", ".cafe"];
+  selectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      // Divide el texto en letras
+      const split = new SplitText(el, { type: "chars" });
+      // Anima las letras con GSAP
+      gsap.from(split.chars, {
+        y: 40,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.7,
+        ease: "power2.out",
+        delay: 0.2
+      });
     });
   });
 }

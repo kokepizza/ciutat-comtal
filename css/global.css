@@ -1,7 +1,7 @@
 :root {
     --text: #1D1D1B;
     --bg: #F5F5F5;
-    --gray: #e3e3e0;
+    --gray: #dcdada;
     --light-gray-blue: #6161d2;
     --light-orange: #ef8a37;
     --light-pinky-red: #d05954;
@@ -9,19 +9,11 @@
 
 /* Headings */
 @font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-Medium.woff2') format('woff2'),
-         url('/fonts/SuisseIntl-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'Anton';
+    src: url('/fonts/Anton-Regular.woff2') format('woff2'),
+         url('/fonts/Anton-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-MediumItalic.woff2') format('woff2'),
-         url('/fonts/SuisseIntl-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
 }
 
 /* Text */
@@ -52,10 +44,11 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Suisse Intl', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 400;
     font-weight: normal;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 
 i {
@@ -112,7 +105,7 @@ main {
 
 .title {
     font-size: 17vw;
-    line-height: .8;
+    line-height: .9;
     padding: 2rem 0 8rem;
 }
 
@@ -220,22 +213,17 @@ main {
         z-index: 100;
         display: flex;
         flex-direction: column;
-        font-family: 'Suisse Intl', sans-serif;
-        letter-spacing: -0.04em;
-        font-weight: 500;
+        font-family: 'Editorial New', serif;
+        font-weight: 400;
         font-size: 2rem;
     }
 
     #notes-menu a {
         display: block;
         padding: .25rem 4rem .25rem 0;
-        color: var(--gray);
+        color: var(--text);
         opacity: 1;
-        transition: all 0.3s ease;
-
-        &:hover {
-            color: var(--text);
-        }
+        transition: opacity 0.3s ease;
     }
 
     #notes-menu a.active {
@@ -243,7 +231,7 @@ main {
     }
 
     #notes-menu a:not(:last-child) {
-        border-bottom: 1px dashed var(--gray);
+        border-bottom: 1px dashed var(--text);
     }
     
     #notes-menu a.hide {

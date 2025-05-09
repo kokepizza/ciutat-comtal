@@ -4,6 +4,7 @@ export function initDesktopAnimations() {
   initYearsAnimation();
   initArticlesNav();
   initHideNav();
+  animateTitles();
 }
 
 function initYearsAnimation() {
@@ -118,5 +119,28 @@ function initHideNav() {
     start: "top top",
     onEnter: () => { LINK_CIUTAT.classList.add("hide"); },
     onLeaveBack: () => { LINK_CIUTAT.classList.remove("hide"); },
+  });
+}
+
+// Animació dels .title h2
+function animateTitles() {
+
+  document.querySelectorAll('.title h2').forEach(h2 => {
+    gsap.set(h2, { scaleY: 3, transformOrigin: "top" });
+
+    const colsestH2 = h2.closest('article, section');
+    const MAIN = document.querySelector("main");
+
+    gsap.to(h2, {
+      scaleY: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: colsestH2,
+        scroller: MAIN,
+        start: "top top",
+        end: "bottom 90%",
+        scrub: true
+      }
+    });
   });
 }
