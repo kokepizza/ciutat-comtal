@@ -23,7 +23,8 @@
     z-index: 100;
 }
 
-.close-modal {
+.close-modal,
+.close-graphs {
     position: absolute;
     z-index: 10;
     top: 3.5rem;
@@ -86,6 +87,91 @@
     font-weight: 700;;
 }
 
+/* GRAPHS */
+.graphs-button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.graphs-button:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.modal-graphs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    backdrop-filter: blur(1rem);
+    z-index: 100;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphs-container {
+    width: 100%;
+    max-width: 64rem;
+
+    svg {
+        width: 100%;
+    }
+}
+
+.x-axis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: .5rem;
+    border-top: 1px solid var(--text);
+}
+
+.graph-controls {
+    font-family: 'Suisse Intl', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+    }
+}
+
+input[type="checkbox"][data-graph="cafe-graph"] {
+    accent-color: var(--light-gray-blue);
+}
+
+input[type="checkbox"][data-graph="menu-graph"] {
+    accent-color: green;
+}
+
+input[type="checkbox"][data-graph="lloguer-graph"] {
+    accent-color: var(--light-orange);
+}
+
+input[type="checkbox"][data-graph="sou-graph"] {
+    accent-color: var(--light-pinky-red);
+}
+
 @media (min-width: 900px) {
     .modal-years {
         flex-direction: row;
@@ -126,5 +212,17 @@
             padding-bottom: 0;
             font-size: 2rem;
         }
+    }
+
+    .close-graphs {
+        right: 1.5rem;
+    }
+
+    .x-axis {
+        border-top: 2px solid var(--text);
+    }
+
+    .graph-controls {
+        gap: 4rem;
     }
 }

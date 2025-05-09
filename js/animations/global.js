@@ -7,6 +7,7 @@ export function initGlobalAnimations() {
   initHFColor();
   initSectionsNav();
   openModal();
+  openGraphsModal(); // <-- Añadido aquí
   initReflexioAnimation();
 }
 
@@ -256,5 +257,68 @@ function initReflexioAnimation() {
       end: "bottom bottom",
       scrub: true,
     }
+  });
+}
+
+
+// Abrir y cerrar el modal de gráficas
+function openGraphsModal() {
+  const modalGraphs = document.querySelector(".modal-graphs");
+  const graphsButton = document.querySelector(".graphs-button");
+  const closeGraphs = document.querySelector(".close-graphs");
+  const header = document.querySelector(".pages");
+  const main = document.querySelector("main");
+
+  if (!modalGraphs || !graphsButton || !closeGraphs) return;
+
+  function disableInteractionGraphs() {
+    header.style.pointerEvents = "none";
+    modalGraphs.style.pointerEvents = "auto";
+    closeGraphs.style.pointerEvents = "auto";
+    main.style.overflowY = "hidden";
+    graphsButton.style.display = "none";
+  }
+
+  function enableInteractionGraphs() {
+    header.style.pointerEvents = "";
+    modalGraphs.style.pointerEvents = "";
+    closeGraphs.style.pointerEvents = "";
+    main.style.overflowY = "";
+    graphsButton.style.display = "";
+  }
+
+  graphsButton.addEventListener("click", () => {
+    modalGraphs.classList.remove("hidden");
+    setTimeout(() => {
+      modalGraphs.classList.add("open");
+      disableInteractionGraphs();
+    });
+    // Sincroniza el estado de los paths con los checkboxes al abrir el modal
+    document.querySelectorAll('.toggle-svg').forEach(toggle => {
+      const graphClass = toggle.dataset.graph;
+      const path = document.querySelector(`.${graphClass}`);
+      if (path) {
+        path.style.display = toggle.checked ? '' : 'none';
+      }
+    });
+  });
+
+  closeGraphs.addEventListener("click", () => {
+    modalGraphs.classList.remove("open");
+    setTimeout(() => {
+      modalGraphs.classList.add("hidden");
+      enableInteractionGraphs();
+    });
+  });
+
+  // Listeners para mostrar/ocultar paths según el checkbox
+  document.querySelectorAll('.toggle-svg').forEach(toggle => {
+    toggle.addEventListener('change', function() {
+      const graphClass = this.dataset.graph;
+      const path = document.querySelector(`.${graphClass}`);
+      if (path) {
+        path.style.display = this.checked ? '' : 'none';
+      }
+    });
   });
 }
