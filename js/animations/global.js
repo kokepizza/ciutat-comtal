@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
 CustomEase.create("scrollEase", "M0,0 C0.2,0 0.1,1 1,1");
 
@@ -351,22 +351,22 @@ function openGraphsModal() {
   });
 }
 
-// SplitText per animar les dades
+// animar les dades
 function animateDataText() {
   const selectors = [".lloguer", ".sou", ".menu", ".cafe"];
+  const elements = [];
   selectors.forEach(selector => {
     document.querySelectorAll(selector).forEach(el => {
-      // Divide el texto en letras
-      const split = new SplitText(el, { type: "chars" });
-      // Anima las letras con GSAP
-      gsap.from(split.chars, {
-        y: 40,
-        opacity: 0,
-        stagger: 0.05,
-        duration: 0.7,
-        ease: "power2.out",
-        delay: 0.2
-      });
+      elements.push(el);
     });
+  });
+
+  gsap.from(elements, {
+    y: 40,
+    opacity: 0,
+    stagger: 0.3,
+    duration: 0.7,
+    ease: "power2.out",
+    delay: 0.2
   });
 }
