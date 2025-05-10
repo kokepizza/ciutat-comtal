@@ -364,9 +364,9 @@ function animateDataText() {
   gsap.from(elements, {
     y: 40,
     opacity: 0,
-    stagger: 0.3,
-    duration: 0.7,
-    ease: "power2.out",
-    delay: 0.2
+    stagger: 0.5,
+    duration: 1,
+    ease: "back.out(1.5)",
+    delay: 0.5
   });
 }
