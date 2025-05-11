@@ -6,7 +6,7 @@
     "sou": "752,31€",
     "cafe": "0,58€",
     "menu": "6,06€",
-    "texto": "Barcelona viu un ambient d’esperança. S’intueix la recuperació econòmica després d’anys difícils. La ciutat encara respira l’energia olímpica i es consolida com a referent cultural i europeu. Les desigualtats, però, continuen presents i el mercat laboral és fràgil."
+    "texto": "Barcelona encara respira l’energia olímpica. Hi ha esperança i una sensació que tot just comença una nova etapa: la ciutat es projecta cap enfora, es consolida com a referent cultural i europeu. Però sota aquesta eufòria, les desigualtats persisteixen i el mercat laboral continua sent fràgil."
   },
   {
     "año": "1997",
@@ -15,7 +15,7 @@
     "sou": "853,75€",
     "cafe": "0,69€",
     "menu": "6,77€",
-    "texto": "Amb l’entrada a l’euro cada cop més a prop, es respira estabilitat. Hi ha cert optimisme social, tot i que l’atur continua sent alt. A Barcelona es veuen les primeres grans transformacions urbanes post-92 i augmenta l’atracció turística."
+    "texto": "Amb l’arribada de l’euro a l’horitzó, es respira una certa estabilitat. L’atur segueix alt, però l’optimisme es manté. A Barcelona s’inicien grans transformacions urbanes i el turisme comença a créixer, afegint pressió sobre l’equilibri entre ciutat i ciutadania."
   },
   {
     "año": "1999",
@@ -24,7 +24,7 @@
     "sou": "953,60€",
     "cafe": "0,76€",
     "menu": "7,13€",
-    "texto": "Barcelona viu una transició cap al nou mil·lenni amb entusiasme. L’euro ja és una realitat administrativa i l’economia sembla robusta. La ciutat continua obrint-se al món i els barris comencen a notar els efectes de la globalització."
+    "texto": "Barcelona avança cap al nou mil·lenni amb confiança. L’euro pren forma i l’economia sembla estable. La ciutat s’obre cada cop més al món, mentre als barris es comencen a percebre els primers signes d’un model urbà més orientat al mercat que a la vida quotidiana."
   },
   {
     "año": "2001",
@@ -33,7 +33,7 @@
     "sou": "1.057,42€",
     "cafe": "0,85€",
     "menu": "7,61€",
-    "texto": "Comença una dècada marcada per l’expansió urbanística. L’economia funciona, la construcció creix i molta gent accedeix a l’habitatge. Però també es generen bombolles i desigualtats. A Barcelona, s’amplien infraestructures i s’incrementa la pressió turística."
+    "texto": "Comença una dècada d’expansió urbanística. L’economia creix, la construcció es dispara i molts accedeixen a l’habitatge. Però també es formen bombolles i les desigualtats s’accentuen. A Barcelona, s’amplien infraestructures i la pressió turística es fa més present."
   },
   {
     "año": "2004",
@@ -42,7 +42,7 @@
     "sou": "1.192,90€",
     "cafe": "1,04€",
     "menu": "8,29€",
-    "texto": "Es respira eufòria immobiliària. Barcelona es transforma físicament: nous barris, noves línies de metro, nova costa. L’economia sembla estable, però s’està gestant una crisi silenciosa. El turisme ja forma part essencial del paisatge quotidià."
+    "texto": "Eufòria immobiliària i transformació urbana. Barcelona estrena nous barris, línies de metro i una façana litoral renovada. L’economia sembla estable, però sota la superfície es gesta una crisi. El turisme s’integra del tot en la vida diària de la ciutat."
   },
   {
     "año": "2006",
@@ -69,7 +69,7 @@
     "sou": "1.308,71€",
     "cafe": "1,14€",
     "menu": "8,80€",
-    "texto": "En plena crisi, Barcelona es veu afectada per retallades, atur i precarietat. El carrer es converteix en espai de protesta. Les desigualtats es fan més evidents, i la confiança en les institucions disminueix. Es comença a parlar d’indignació col·lectiva."
+    "texto": "En plena crisi, Barcelona es veu afectada per retallades, atur i precarietat. El carrer es converteix en un espai de protesta. Les desigualtats es fan més evidents, i la confiança en les institucions disminueix. Es comença a parlar d’indignació col·lectiva."
   },
   {
     "año": "2013",
@@ -96,7 +96,7 @@
     "sou": "1.402,61€",
     "cafe": "1,24€",
     "menu": "9,78€",
-    "texto": "Un any intens. Barcelona viu l’impacte del referèndum de l’1 d’octubre i les càrregues policials. L’atemptat a la Rambla commociona la ciutat. Malgrat tot, la vida continua i la societat s’organitza. La ciutat mostra el seu caràcter resistent i divers."
+    "texto": "Un any intens. Barcelona viu l’impacte del referèndum de l’1 d’octubre i les càrregues policials. L’atemptat a la Rambla commociona la ciutat. Malgrat tot, la vida continua i la societat s’organitza. La ciutat mostra el seu caràcter resilient."
   },
   {
     "año": "2020",
@@ -123,7 +123,7 @@
     "sou": "1.602,18€",
     "cafe": "1,35€",
     "menu": "11,03€",
-    "texto": "Es nota un retorn accelerat a la normalitat. El turisme torna amb força, però la inflació fa estralls en les butxaques. Es parla molt del preu del cafè i dels menús. La ciutat lluita per preservar la seva identitat."
+    "texto": "Barcelona recupera el ritme. Tornen els esdeveniments, el turisme i la vida als carrers. Però també tornen les presses, el soroll i les dificultats per arribar a final de mes. S’intensifica la sensació que la ciutat canvia massa de pressa."
   },
   {
     "año": "2023",
@@ -132,7 +132,7 @@
     "sou": "1.675,33€",
     "cafe": "1,37€",
     "menu": "14,72€",
-    "texto": "Barcelona viu tensions entre la recuperació econòmica i la dificultat per arribar a final de mes. Els lloguers i els preus s’han disparat. La ciutat és atractiva per a molts, però cada cop més cara per als qui hi viuen."
+    "texto": "Barcelona viu tensions entre la recuperació econòmica i l’ofec del cost de la vida. Els lloguers i els preus es disparen. La ciutat continua sent atractiva, però cada cop més inaccessible per a molts residents."
   },
   {
     "año": "2024",
@@ -141,7 +141,7 @@
     "sou": "1.712,91€",
     "cafe": "1,42€",
     "menu": "15,14€",
-    "texto": "S’intensifica el debat sobre el model de ciutat. Els projectes verds i socials s’enfronten a l’especulació. Barcelona aposta per la sostenibilitat, però amb desigualtats creixents. L’economia aguanta, però el malestar social és palpable, sobretot entre joves."
+    "texto": "S’intensifica el debat sobre el model de ciutat. Els projectes verds i socials s’enfronten a l’especulació. Barcelona aposta per la sostenibilitat, però amb desigualtats creixents. L’economia aguanta, però el malestar social és palpable sobretot entre joves."
   },
   {
     "año": "2025",
