@@ -177,7 +177,7 @@ input[type="checkbox"][data-graph="lloguer-graph"] {
 }
 
 input[type="checkbox"][data-graph="sou-graph"] {
-    accent-color: var(--light-pinky-red);
+    accent-color: var(--coral);
 }
 
 @media (min-width: 900px) {
