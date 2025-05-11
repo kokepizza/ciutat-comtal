@@ -26,12 +26,12 @@ No es requereix cap instal·lació especial. Simplement obre `index.html` al teu
 
 ## Dependències
 
-- [GSAP](https://greensock.com/gsap/) i els seus plugins associats per a animacions.
+- [GSAP](https://gsap.com/) i els seus plugins associats per a animacions.
 - No es requereixen frameworks addicionals.
 
 ## Crèdits
 
-Desenvolupat per kokepizza.
+Desenvolupat per [kokepizza](https://kokepizza.com/).
 
 ---
 
