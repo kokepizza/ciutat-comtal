@@ -1,10 +1,10 @@
 export function initDesktopAnimations() {
   console.log("Init animacions d'escriptori");
   
+  animateTitles();
   initYearsAnimation();
   initArticlesNav();
   initHideNav();
-  animateTitles();
 }
 
 function initYearsAnimation() {
@@ -45,9 +45,6 @@ function initArticlesNav() {
     const HREF = this.getAttribute("href");
     const TARGET = document.querySelector(HREF);
     if (!TARGET) return;
-
-    // LINKS.forEach(link => link.classList.remove("active"));
-    // this.classList.add("active");
 
     gsap.to(MAIN, {
       scrollTo: { y: TARGET, offsetY: -1 },
