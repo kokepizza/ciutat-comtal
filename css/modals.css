@@ -127,9 +127,15 @@
 .graphs-container {
     width: 100%;
     max-width: 64rem;
+    text-align: center;
 
     svg {
         width: 100%;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        
     }
 }
 
@@ -159,7 +165,7 @@
 }
 
 input[type="checkbox"][data-graph="cafe-graph"] {
-    accent-color: var(--light-gray-blue);
+    accent-color: var(--indigo);
 }
 
 input[type="checkbox"][data-graph="menu-graph"] {
@@ -167,7 +173,7 @@ input[type="checkbox"][data-graph="menu-graph"] {
 }
 
 input[type="checkbox"][data-graph="lloguer-graph"] {
-    accent-color: var(--light-orange);
+    accent-color: var(--orange);
 }
 
 input[type="checkbox"][data-graph="sou-graph"] {
@@ -226,6 +232,10 @@ input[type="checkbox"][data-graph="sou-graph"] {
 
     .graph-controls {
         gap: 4rem;
+    }
+
+    .graphs-container h4 {
+        font-size: 2rem;
     }
 }
 

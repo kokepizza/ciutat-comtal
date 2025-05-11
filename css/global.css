@@ -2,9 +2,9 @@
     --text: #1D1D1B;
     --bg: #F5F5F5;
     --gray: #dcdada;
-    --light-gray-blue: #6161d2;
-    --light-orange: #ef8a37;
-    --light-pinky-red: #d05954;
+    --indigo: #6161d2;
+    --orange: #ef8a37;
+    --coral: #d05954;
 }
 
 /* Headings */
@@ -40,7 +40,7 @@ html {
     font-weight: 400;
     line-height: 1.2;
     color: var(--text);
-    background-color: var(--light-gray-blue);
+    background-color: var(--indigo);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,16 +71,16 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-[data-color="var(--light-gray-blue)"] {
-    background-color: var(--light-gray-blue);
+[data-color="var(--indigo)"] {
+    background-color: var(--indigo);
 }
 
-[data-color="var(--light-orange)"] {
-    background-color: var(--light-orange);
+[data-color="var(--orange)"] {
+    background-color: var(--orange);
 }
 
-[data-color="var(--light-pinky-red)"] {
-    background-color: var(--light-pinky-red);
+[data-color="var(--coral)"] {
+    background-color: var(--coral);
 }
 
 [data-color="var(--bg)"] {
@@ -112,7 +112,7 @@ main {
     border-top: 2px solid var(--text);
     text-align: center;
     text-transform: uppercase;
-    background-color: var(--light-gray-blue);
+    background-color: var(--indigo);
 }
 
 .content {
