@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, CustomEase);
 
-CustomEase.create("scrollEase", "M0,0 C0.2,0 0.1,1 1,1");
+CustomEase.create("scrollEase", "M0,0 C0.4,0.201 0.293,1 1,1");
 
 export function initGlobalAnimations() {
   initSPI();

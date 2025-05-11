@@ -65,7 +65,7 @@
     justify-content: center;
     gap: 20vh;
     font-family: 'Editorial New', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2rem;
     background-color: rgba(255, 255, 255, 0.2);
     pointer-events: none;
@@ -102,25 +102,25 @@
         font-size: inherit;
         background-color: transparent;
         pointer-events: auto;
+        text-transform: uppercase;
     }
 
     .pages li {
         padding: 0 1rem;
-        border-right: 1.5px dashed var(--text);
-        color: var(--gray);
-        transition: color 0.3s ease;
+        border-right: 1px dashed var(--text);
+        color: var(--text);
+        transition: all 0.3s ease;
 
         &:hover {
-            color: var(--text);
+            font-weight: 700;
         }
     }
 
     .pages a.active {
-        color: var(--text);
         font-weight: 700;
     }
 
     .pages li:first-child {
-        border-left: 1.5px dashed var(--text);
+        border-left: 1px dashed var(--text);
     }
 }
