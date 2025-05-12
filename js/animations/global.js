@@ -9,7 +9,6 @@ export function initGlobalAnimations() {
   openYearsModal();
   openGraphsModal();
   initReflexioAnimation();
-  animateDataText();
 }
 
 // Scroll Progress Indicator
@@ -100,6 +99,7 @@ function initSectionsNav() {
     link.addEventListener("click", scrollToSection);
   });
 
+  // actualitza l'estat de pages
   LINKS.forEach(function(link) {
     const HREF = link.getAttribute("href");
     const TARGET = document.querySelector(HREF);
@@ -132,21 +132,21 @@ async function fetchYearsData() {
   return yearsData;
 }
 
-let originalCronologiaTitle = null;
+let originalTitle = null;
 
 // omple el modal amb les dades de l'any seleccionat
-function updateModalWithYearData(data) {
+function updateModalData(data) {
   // canvia l'any
   const yearModal = document.querySelector(".year-modal");
   if (yearModal) yearModal.textContent = data.año;
 
-  // NUEVO: actualiza el h2 de la cronología
-  const cronologiaTitle = document.querySelector("#cronologia .title h2");
-  if (cronologiaTitle) {
-    if (originalCronologiaTitle === null) {
-      originalCronologiaTitle = cronologiaTitle.textContent;
+  // actualitza el h2 de la cronologia
+  const title = document.querySelector("#cronologia .title h2");
+  if (title) {
+    if (originalTitle === null) {
+      originalTitle = title.textContent;
     }
-    cronologiaTitle.textContent = data.año;
+    title.textContent = data.año;
   }
 
   // canvia el scr de la imatge i l'alt
@@ -173,41 +173,41 @@ function updateModalWithYearData(data) {
 
 // obrir i tancar modal i carregar les dades dinàmicament
 function openYearsModal() {
-  const modal = document.querySelector(".modal-years");
-  const yearButtons = document.querySelectorAll("button.year");
-  const closeModal = document.querySelector(".close-modal");
-  const header = document.querySelector(".pages");
-  const main = document.querySelector("main");
-  const graphsButton = document.querySelector(".graphs-button"); // <-- Añadido
+  const MODAL = document.querySelector(".modal-years");
+  const YEARS = document.querySelectorAll("button.year");
+  const CLOSE = document.querySelector(".close-modal");
+  const HEADER = document.querySelector(".pages");
+  const MAIN = document.querySelector("main");
+  const BUTTON = document.querySelector(".graphs-button");
 
-  if (!modal || !closeModal) return;
+  if (!MODAL || !CLOSE) return;
 
-  // deshabilito el header
+  // deshabilito el header per evitar scrolls
   function disableInteraction() {
-    header.style.pointerEvents = "none";
-    modal.style.pointerEvents = "auto";
-    closeModal.style.pointerEvents = "auto";
-    main.style.overflowY = "hidden";
-    graphsButton.style.display = "none"; // oculto el botó de gráficas
+    HEADER.style.pointerEvents = "none";
+    MODAL.style.pointerEvents = "auto";
+    CLOSE.style.pointerEvents = "auto";
+    MAIN.style.overflowY = "hidden";
+    BUTTON.style.display = "none"; // oculto el botó de gráficas
   }
 
   // restauro els pointerEvents
   function enableInteraction() {
-    header.style.pointerEvents = "";
-    modal.style.pointerEvents = "";
-    closeModal.style.pointerEvents = "";
-    main.style.overflowY = "";
-    graphsButton.style.display = ""; 
+    HEADER.style.pointerEvents = "";
+    MODAL.style.pointerEvents = "";
+    CLOSE.style.pointerEvents = "";
+    MAIN.style.overflowY = "";
+    BUTTON.style.display = ""; 
   }
 
-  yearButtons.forEach(button => {
+  YEARS.forEach(button => {
     button.addEventListener("click", async () => {
       // carrego .json i actualitzo el modal
       const yearIndex = parseInt(button.getAttribute("data-year"), 10) - 1;
       const data = await fetchYearsData();
       if (data[yearIndex]) {
-        updateModalWithYearData(data[yearIndex]);
-        // ANIMACIÓN: cada dato aparece uno tras otro
+        updateModalData(data[yearIndex]);
+
         const elements = [
           document.querySelector(".lloguer"),
           document.querySelector(".sou"),
@@ -215,6 +215,7 @@ function openYearsModal() {
           document.querySelector(".menu")
         ];
         
+        // animació de les dades
         const tl = gsap.timeline();
         elements.forEach((el, i) => {
           if (el) {
@@ -226,39 +227,31 @@ function openYearsModal() {
           }
         });
       }
-      modal.classList.remove("hidden");
+      MODAL.classList.remove("hidden");
       setTimeout(() => {
-        modal.classList.add("open");
+        MODAL.classList.add("open");
         disableInteraction();
       });
     });
   });
 
-  closeModal.addEventListener("click", () => {
-    modal.classList.remove("open");
+  CLOSE.addEventListener("click", () => {
+    MODAL.classList.remove("open");
     setTimeout(() => {
-      modal.classList.add("hidden");
+      MODAL.classList.add("hidden");
       enableInteraction();
+
       // restaurar el text original del h2 de cronologia
-      const cronologiaTitle = document.querySelector("#cronologia .title h2");
-      if (cronologiaTitle && originalCronologiaTitle !== null) {
-        cronologiaTitle.textContent = originalCronologiaTitle;
-        originalCronologiaTitle = null;
+      const title = document.querySelector("#cronologia .title h2");
+      if (title && originalTitle !== null) {
+        title.textContent = originalTitle;
+        originalTitle = null;
       }
-      // netejar el SplitText al tancar el modal
-      [".lloguer", ".sou", ".cafe", ".menu"].forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-          if (el._splitText) {
-            el._splitText.revert();
-            el._splitText = null;
-          }
-        });
-      });
     });
   });
 }
 
-// animació de la reflexió final
+// animació reflexió final
 function initReflexioAnimation() {
   const MAIN = document.querySelector("main");
   const SECTION = document.querySelector("#reflexio");
@@ -288,37 +281,36 @@ function initReflexioAnimation() {
   });
 }
 
-
 // obrir i tancar el modal de les gràfiques
 function openGraphsModal() {
-  const modalGraphs = document.querySelector(".modal-graphs");
-  const graphsButton = document.querySelector(".graphs-button");
-  const closeGraphs = document.querySelector(".close-graphs");
-  const header = document.querySelector(".pages");
-  const main = document.querySelector("main");
+  const GRAPHS = document.querySelector(".modal-graphs");
+  const BUTTON = document.querySelector(".graphs-button");
+  const CLOSE = document.querySelector(".close-graphs");
+  const HEADER = document.querySelector(".pages");
+  const MAIN = document.querySelector("main");
 
-  if (!modalGraphs || !graphsButton || !closeGraphs) return;
+  if (!GRAPHS || !BUTTON || !CLOSE) return;
 
   function disableInteractionGraphs() {
-    header.style.pointerEvents = "none";
-    modalGraphs.style.pointerEvents = "auto";
-    closeGraphs.style.pointerEvents = "auto";
-    main.style.overflowY = "hidden";
-    graphsButton.style.display = "none";
+    HEADER.style.pointerEvents = "none";
+    GRAPHS.style.pointerEvents = "auto";
+    CLOSE.style.pointerEvents = "auto";
+    MAIN.style.overflowY = "hidden";
+    BUTTON.style.display = "none";
   }
 
   function enableInteractionGraphs() {
-    header.style.pointerEvents = "";
-    modalGraphs.style.pointerEvents = "";
-    closeGraphs.style.pointerEvents = "";
-    main.style.overflowY = "";
-    graphsButton.style.display = "";
+    HEADER.style.pointerEvents = "";
+    GRAPHS.style.pointerEvents = "";
+    CLOSE.style.pointerEvents = "";
+    MAIN.style.overflowY = "";
+    BUTTON.style.display = "";
   }
 
-  graphsButton.addEventListener("click", () => {
-    modalGraphs.classList.remove("hidden");
+  BUTTON.addEventListener("click", () => {
+    GRAPHS.classList.remove("hidden");
     setTimeout(() => {
-      modalGraphs.classList.add("open");
+      GRAPHS.classList.add("open");
       disableInteractionGraphs();
     });
 
@@ -331,10 +323,10 @@ function openGraphsModal() {
     });
   });
 
-  closeGraphs.addEventListener("click", () => {
-    modalGraphs.classList.remove("open");
+  CLOSE.addEventListener("click", () => {
+    GRAPHS.classList.remove("open");
     setTimeout(() => {
-      modalGraphs.classList.add("hidden");
+      GRAPHS.classList.add("hidden");
       enableInteractionGraphs();
     });
   });
@@ -348,25 +340,5 @@ function openGraphsModal() {
         path.style.display = this.checked ? '' : 'none';
       }
     });
-  });
-}
-
-// animar les dades
-function animateDataText() {
-  const selectors = [".lloguer", ".sou", ".menu", ".cafe"];
-  const elements = [];
-  selectors.forEach(selector => {
-    document.querySelectorAll(selector).forEach(el => {
-      elements.push(el);
-    });
-  });
-
-  gsap.from(elements, {
-    y: 40,
-    opacity: 0,
-    stagger: 0.5,
-    duration: 1,
-    ease: "back.out(1.5)",
-    delay: 0.5
   });
 }

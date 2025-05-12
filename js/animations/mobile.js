@@ -6,29 +6,29 @@ export function initMobileAnimations() {
 }
 
 function initMobileMenu() {
-  const toggleMenu = document.querySelector(".toggle-menu");
-  const pagesMenu = document.querySelector(".pages");
-  const menuItems = document.querySelectorAll(".pages li");
+  const TOGGLE = document.querySelector(".toggle-menu");
+  const PAGES = document.querySelector(".pages");
+  const ITEMS = document.querySelectorAll(".pages li");
   const line1 = document.querySelector(".line-1");
   const line2 = document.querySelector(".line-2");
   const line3 = document.querySelector(".line-3");
   
   // config GSAP al menú
-  if (toggleMenu && pagesMenu) {
+  if (TOGGLE && PAGES) {
 
     // items i menú ocults incialment
-    gsap.set(pagesMenu, { 
+    gsap.set(PAGES, { 
       opacity: 0,
       backdropFilter: "blur(0px)",
     });
     
-    gsap.set(menuItems, { x: 100, opacity: 0 });
+    gsap.set(ITEMS, { x: 100, opacity: 0 });
     
     // TIMELINE MENÚ
     const menuTL = gsap.timeline({ paused: true });
     
     // primer animo el blur
-    menuTL.to(pagesMenu, { 
+    menuTL.to(PAGES, { 
       opacity: 1, 
       backdropFilter: "blur(10px)",
       duration: 0.5,
@@ -36,7 +36,7 @@ function initMobileMenu() {
     });
     
     // entrada dels items amb stagger i que comenci 0.2 abans que acabi l'animació del blur
-    menuTL.to(menuItems, { 
+    menuTL.to(ITEMS, { 
       x: 0, 
       opacity: 1, 
       stagger: 0.1,
@@ -70,30 +70,30 @@ function initMobileMenu() {
       }, 0);
     
 
-    toggleMenu.addEventListener("click", () => {
+    TOGGLE.addEventListener("click", () => {
 
-      if (pagesMenu.classList.contains("active")) {
+      if (PAGES.classList.contains("active")) {
         menuTL.timeScale(2).reverse();
         buttonTL.timeScale(2).reverse();
         setTimeout(() => {
-          pagesMenu.classList.remove("active");
+          PAGES.classList.remove("active");
         }, 400);
 
       } else {
-        pagesMenu.classList.add("active");
+        PAGES.classList.add("active");
         menuTL.timeScale(1).play();
         buttonTL.timeScale(1).play();
       }
     });
 
-    // Cerrar menú al hacer clic en un menuItem
-    menuItems.forEach(item => {
+    // tancar menú al fer clic en un ITEM amb el reverse x2 per que es pugui veure el ScrollTo
+    ITEMS.forEach(item => {
       item.addEventListener("click", () => {
-        if (pagesMenu.classList.contains("active")) {
+        if (PAGES.classList.contains("active")) {
           menuTL.timeScale(2).reverse();
           buttonTL.timeScale(2).reverse();
           setTimeout(() => {
-            pagesMenu.classList.remove("active");
+            PAGES.classList.remove("active");
           }, 400);
         }
       });

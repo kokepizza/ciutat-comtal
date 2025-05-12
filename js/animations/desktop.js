@@ -4,7 +4,7 @@ export function initDesktopAnimations() {
   animateTitles();
   initYearsAnimation();
   initArticlesNav();
-  // initHideNav();
+  initGraphsButton();
 }
 
 function initYearsAnimation() {
@@ -115,5 +115,31 @@ function animateTitles() {
         scrub: true
       }
     });
+  });
+}
+
+// animació botó gràfiques #cronologia
+function initGraphsButton() {
+  const BUTTON = document.querySelector(".graphs-button");
+  const CRONO = document.querySelector("#cronologia");
+  const MAIN = document.querySelector("main");
+
+  if (!BUTTON || !CRONO) return;
+
+  gsap.set(BUTTON, { autoAlpha: 0, y: 100 });
+
+  gsap.to(BUTTON, {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+
+    scrollTrigger: {
+      trigger: CRONO,
+      scroller: MAIN,
+      start: "70% 70%",
+      end: "top top",
+      scrub: true,
+    }
   });
 }

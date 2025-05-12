@@ -1,7 +1,6 @@
 :root {
     --text: #1D1D1B;
     --bg: #F5F5F5;
-    --gray: #dcdada;
     --indigo: #6161d2;
     --orange: #ef8a37;
     --coral: #d05954;
@@ -236,13 +235,14 @@ main {
         font-weight: 300;
         font-size: .75rem;
         text-transform: uppercase;
+        opacity: 1;
+        transition: opacity 0.3s ease;
     }
 
     #notes-menu a {
         display: block;
         padding: .25rem 4rem .25rem 0;
         color: var(--text);
-        /* opacity: 1; */
         transition: all 0.3s ease;
 
         &:hover {
