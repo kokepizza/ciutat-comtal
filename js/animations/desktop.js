@@ -4,7 +4,7 @@ export function initDesktopAnimations() {
   animateTitles();
   initYearsAnimation();
   initArticlesNav();
-  initHideNav();
+  // initHideNav();
 }
 
 function initYearsAnimation() {
@@ -39,6 +39,8 @@ function initYearsAnimation() {
 function initArticlesNav() {
   const MAIN = document.querySelector("main");
   const LINKS = document.querySelectorAll("#notes-menu a");
+  const NOTES_MENU = document.querySelector("#notes-menu");
+  const CRONO = document.querySelector("#cronologia");
 
   function scrollToArticle(e) {
     e.preventDefault();
@@ -52,7 +54,7 @@ function initArticlesNav() {
       ease: "scrollEase",
     });
   }
-  
+
   LINKS.forEach(function(link) {
     link.addEventListener("click", scrollToArticle);
   });
@@ -67,59 +69,33 @@ function initArticlesNav() {
       trigger: TARGET,
       start: "top top",
       onEnter: () => {
-        LINKS.forEach(l =>
-          l.classList.remove("active"));
-          link.classList.add("active");
+        LINKS.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
       },
       onEnterBack: () => {
-        LINKS.forEach(l =>
-          l.classList.remove("active"));
-          link.classList.add("active");
+        LINKS.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
       }
     });
   });
+
+  // oculta #notes-menu quan entres a #cronologia
+  function hideNotes() {
+    if (!NOTES_MENU || !CRONO) return;
+
+    ScrollTrigger.create({
+      scroller: MAIN,
+      trigger: CRONO,
+      start: "top top",
+      onEnter: () => { NOTES_MENU.classList.add("hide"); },
+      onLeaveBack: () => { NOTES_MENU.classList.remove("hide"); },
+    });
+  }
+
+  hideNotes();
 }
 
-// Ocultar/mostrar Nav #notes
-function initHideNav() {
-  const MAIN = document.querySelector("main");
-  const LINK_PUNT = document.querySelector('a[href="#punt-partida"]');
-  const LINK_COST = document.querySelector('a[href="#cost-viure"]');
-  const LINK_CIUTAT = document.querySelector('a[href="#ciutat-venda"]');
-  const COST = document.querySelector("#cost-viure");
-  const CIUTAT = document.querySelector("#ciutat-venda");
-  const CRONO = document.querySelector("#cronologia");
-  if (!LINK_PUNT || !LINK_COST || !LINK_CIUTAT || !COST || !CIUTAT || !CRONO) return;
-
-  // quan entres a #cost-viure, ocultes l'enllaç a #punt-partida
-  ScrollTrigger.create({
-    scroller: MAIN,
-    trigger: COST,
-    start: "top top",
-    onEnter: () => { LINK_PUNT.classList.add("hide"); },
-    onLeaveBack: () => { LINK_PUNT.classList.remove("hide"); },
-  });
-
-  // quan entres a #ciutat-venda, ocultes l'enllaç a #cost-viure
-  ScrollTrigger.create({
-    scroller: MAIN,
-    trigger: CIUTAT,
-    start: "top top",
-    onEnter: () => { LINK_COST.classList.add("hide"); },
-    onLeaveBack: () => { LINK_COST.classList.remove("hide"); },
-  });
-
-  // quan entres a #cronologia, ocultes l'enllaç a #ciutat-venda
-  ScrollTrigger.create({
-    scroller: MAIN,
-    trigger: CRONO,
-    start: "top top",
-    onEnter: () => { LINK_CIUTAT.classList.add("hide"); },
-    onLeaveBack: () => { LINK_CIUTAT.classList.remove("hide"); },
-  });
-}
-
-// Animació dels .title h2
+// animació dels .title h2
 function animateTitles() {
 
   document.querySelectorAll('.title h2').forEach(h2 => {

@@ -242,7 +242,7 @@ main {
         display: block;
         padding: .25rem 4rem .25rem 0;
         color: var(--text);
-        opacity: 1;
+        /* opacity: 1; */
         transition: all 0.3s ease;
 
         &:hover {
@@ -258,7 +258,7 @@ main {
         border-bottom: 1px dashed var(--text);
     }
     
-    #notes-menu a.hide {
+    #notes-menu.hide {
         opacity: 0;
         pointer-events: none;
         user-select: none;
