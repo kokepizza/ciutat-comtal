@@ -153,7 +153,6 @@ main {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     font-size: 17vw;
     line-height: 1;
