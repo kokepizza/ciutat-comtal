@@ -20,6 +20,7 @@ function initMobileMenu() {
     gsap.set(PAGES, { 
       opacity: 0,
       backdropFilter: "blur(0px)",
+      WebkitBackdropFilter: "blur(0px)",
     });
     
     gsap.set(ITEMS, { x: 100, opacity: 0 });
@@ -30,7 +31,8 @@ function initMobileMenu() {
     // primer animo el blur
     menuTL.to(PAGES, { 
       opacity: 1, 
-      backdropFilter: "blur(10px)",
+      backdropFilter: "blur(1rem)",
+      WebkitBackdropFilter: "blur(1rem)",
       duration: 0.5,
       ease: "power2.out"
     });

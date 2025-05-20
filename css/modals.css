@@ -20,6 +20,7 @@
     width: 100dvw;
     height: 100dvh;
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     z-index: 100;
 }
 
@@ -113,6 +114,7 @@
     width: 100dvw;
     height: 100dvh;
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     z-index: 100;
     font-family: 'Roboto Mono', monospace;
     letter-spacing: -0.04em;
@@ -195,6 +197,7 @@ input[type="checkbox"][data-graph="sou-graph"] {
         gap: 0;
         background: none;
         backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         padding: 2.5rem 1.5rem;
     }
 
@@ -224,6 +227,7 @@ input[type="checkbox"][data-graph="sou-graph"] {
         flex-direction: column;
         height: 100%;
         backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
 
         p {
             padding-bottom: 0;

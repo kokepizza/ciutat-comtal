@@ -262,6 +262,7 @@ function initReflexioAnimation() {
     autoAlpha: 0, 
     scale: 0.4, 
     filter: "blur(4rem)",
+    WebkitBackdropFilter: "blur(4rem)",
     xPercent: -50,
     yPercent: -50
   });
@@ -270,6 +271,7 @@ function initReflexioAnimation() {
     autoAlpha: 1,
     scale: 1,
     filter: "blur(0px)",
+    WebkitBackdropFilter: "blur(0px)",
     ease: "power3.out",
     scrollTrigger: {
       trigger: SECTION,
